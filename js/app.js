@@ -10,6 +10,7 @@ class TxtRotate {
         this.tick();
     }
 
+
     tick() {
         var i = this.loopNum % this.toRotate.length;
         var fullTxt = this.toRotate[i];
