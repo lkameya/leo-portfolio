@@ -59,11 +59,11 @@ var TxtRotate = function () {
 window.onload = function () {
     // TICK
     var elements = document.getElementsByClassName('txt-rotate');
-    for (var i = 0; i < elements.length; i++) {
-        var toRotate = elements[i].getAttribute('data-rotate');
-        var period = elements[i].getAttribute('data-period');
+    for (var _i = 0; _i < elements.length; _i++) {
+        var toRotate = elements[_i].getAttribute('data-rotate');
+        var period = elements[_i].getAttribute('data-period');
         if (toRotate) {
-            new TxtRotate(elements[i], JSON.parse(toRotate), period);
+            new TxtRotate(elements[_i], JSON.parse(toRotate), period);
         }
     }
 
@@ -73,18 +73,49 @@ window.onload = function () {
     css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
     document.body.appendChild(css);
 
-    // SCROLL LINKS
-    var links = document.querySelectorAll('.scroll a');
+    // SCROLL LINKS ON WHEEL
+    var delay = false;
+    var i = 0;
 
-    links.forEach(function (link) {
-        link.addEventListener('click', function (event) {
+    $(document).on('mousewheel DOMMouseScroll', function (event) {
+        event.preventDefault();
+        console.log('hey');
+        if (delay) return;
+
+        delay = true;
+
+        setTimeout(function () {
+            delay = false;
+        }, 1000);
+
+        var wd = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+
+        var sections = document.getElementsByClassName('page');
+        console.log(wd);
+        if (wd < 0 && i < sections.length) {
+            i++;
+        } else if (i > 0) {
+            i--;
+        }
+        if (sections[i] !== undefined) {
+            TweenMax.to(window, 2, {
+                scrollTo: {
+                    y: sections[i].offsetTop
+                },
+                ease: Power4.easeOut
+            });
+        }
+    });
+    /*
+    // SCROLL LINKS ON CLICK
+    let links = document.querySelectorAll('.scroll a');
+     links.forEach((link) => {
+        link.addEventListener('click', (event) => {
             event.preventDefault();
-
-            var href = link.getAttribute('href').substring(1);
-            var rect = document.getElementById(href).getBoundingClientRect();
-            var topY = rect.top + document.body.scrollTop;
-
-            TweenMax.to(window, 1, {
+             let href = link.getAttribute('href').substring(1);
+            let rect = document.getElementById(href).getBoundingClientRect();
+            let topY = rect.top + document.body.scrollTop;
+             TweenMax.to(window, 1, {
                 scrollTo: {
                     y: topY,
                     autoKill: true
@@ -93,6 +124,7 @@ window.onload = function () {
             });
         });
     });
+    */
 
     /*$('.scroll').on("click", "a", function () {
         var $this = $(this);
