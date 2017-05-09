@@ -60,7 +60,41 @@ window.onload = () => {
     document.body.appendChild(css);
 
 
-    // SCROLL LINKS
+    // SCROLL LINKS ON WHEEL
+    let delay = false;
+    let i = 0;
+
+    $(document).on('mousewheel DOMMouseScroll', function (event) {
+        event.preventDefault();
+        console.log('hey');
+        if (delay) return;
+
+        delay = true;
+
+        setTimeout(function () { delay = false }, 1000);
+
+        let wd = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+   
+        let sections = document.getElementsByClassName('page');
+        console.log(wd);
+        if (wd < 0 && i < sections.length) {
+            i++;
+        } else if (i > 0) {
+            i--;
+        }
+        if (sections[i] !== undefined) {
+            TweenMax.to(window, 2, {
+                scrollTo: {
+                    y: sections[i].offsetTop
+                },
+                ease: Power4.easeOut
+            });
+        }
+
+
+    });
+    /*
+    // SCROLL LINKS ON CLICK
     let links = document.querySelectorAll('.scroll a');
 
     links.forEach((link) => {
@@ -80,6 +114,8 @@ window.onload = () => {
             });
         });
     });
+    */
+
 
     /*$('.scroll').on("click", "a", function () {
         var $this = $(this);

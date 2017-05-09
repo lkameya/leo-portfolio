@@ -38,6 +38,11 @@ li
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
 
+.title  
+    position: absolute
+    top: 100px
+    font-size: 4em
+
 .container
     height: 100%
     
@@ -85,13 +90,29 @@ li
                     width: 98%
                     left: 0
 
+        .arrow, 
+        .arrow:before
+            position: absolute
+            bottom: 15px
+        
         .arrow
-                position: absolute
-                text-align: center
-                bottom: 15px
-                left: 50%
-
-
+            width: 40px
+            height: 70px
+            box-shadow: inset 0 0 0 1px #4a569d
+            border-radius: 25px
+            bottom: 50px
+        
+        .arrow:before
+            content: ''
+            width: 8px
+            height: 8px
+            background: #4a569d
+            margin-left: -4px
+            top: 8px
+            border-radius: 4px
+            animation-duration: 1.5s
+            animation-iteration-count: infinite
+            animation-name: scroll
 
     #about
         text-align: center
@@ -102,11 +123,29 @@ li
         justify-content: center
         position: relative
 
+        .arrow, 
+        .arrow:before
+            position: absolute
+            bottom: 15px
+        
         .arrow
-                position: absolute
-                text-align: center
-                bottom: 15px
-                left: 50%
+            width: 40px
+            height: 70px
+            box-shadow: inset 0 0 0 1px #4a569d
+            border-radius: 25px
+            bottom: 50px
+        
+        .arrow:before
+            content: ''
+            width: 8px
+            height: 8px
+            background: #4a569d
+            margin-left: -4px
+            top: 8px
+            border-radius: 4px
+            animation-duration: 1.5s
+            animation-iteration-count: infinite
+            animation-name: scroll
     
     #work
         text-align: center
@@ -117,11 +156,29 @@ li
         justify-content: center
         position: relative
 
+        .arrow, 
+        .arrow:before
+            position: absolute
+            bottom: 15px
+        
         .arrow
-                position: absolute
-                text-align: center
-                bottom: 15px
-                left: 50%
+            width: 40px
+            height: 70px
+            box-shadow: inset 0 0 0 1px #4a569d
+            border-radius: 25px
+            bottom: 50px
+        
+        .arrow:before
+            content: ''
+            width: 8px
+            height: 8px
+            background: #4a569d
+            margin-left: -4px
+            top: 8px
+            border-radius: 4px
+            animation-duration: 1.5s
+            animation-iteration-count: infinite
+            animation-name: scroll
 
     #contact
         text-align: center
@@ -132,16 +189,34 @@ li
         justify-content: center
         position: relative
 
+        .arrow, 
+        .arrow:before
+            position: absolute
+            top: 15px
+        
         .arrow
-                position: absolute
-                text-align: center
-                bottom: 15px
-                left: 50%
+            width: 40px
+            height: 70px
+            box-shadow: inset 0 0 0 1px #4a569d
+            border-radius: 25px
+            top: 50px
+        
+        .arrow:before
+            content: ''
+            width: 8px
+            height: 8px
+            background: #4a569d
+            margin-left: -4px
+            top: 8px
+            border-radius: 4px
+            animation-duration: 1.5s
+            animation-iteration-count: infinite
+            animation-name: scrollTop
 
     .bounce 
-        -moz-animation: bounce 2s infinite
-        -webkit-animation: bounce 2s infinite
-        animation: bounce 2s infinite
+        -moz-animation: bounce 1s infinite
+        -webkit-animation: bounce 1s infinite
+        animation: bounce 1s infinite
 
     
 // Keyframes
@@ -149,6 +224,13 @@ li
     0%, 20%, 50%, 80%, 100%
         transform: translateY(0)
     40%
-        transform: translateY(-30px)
+        transform: translateY(-10px)
     60%
-        transform: translateY(-15px)
+        transform: translateY(-5px)
+
+@keyframes scroll
+    0%
+        opacity: 1
+    100%
+        opacity: 0
+        transform: translateY(46px)
