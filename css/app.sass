@@ -21,14 +21,17 @@ canvas
     left: 0
 
 
+// MOBILE FIRST
 h1
-    font-size: 5em
+    font-size: 2em
     font-weight: 700
-    line-height: 1.1em
+    line-height: 1.3em
 
 h3
-    font-size: 1.3em
-    
+    font-size: 0.8em
+    margin: 6em 2em 2em 2em
+    line-height: 1.8em
+
 ul 
     text-align: center
     margin-top: 5em
@@ -36,14 +39,12 @@ ul
 li
     display: inline
     padding: 0 1.2em
-    font-size: 1.2em
-    margin-left: 50px
-    width: 25%
+    font-size: 0.8em
+    margin-left: 0.2em
+    width: 15%
     letter-spacing: 0.10em
     text-align: center
 
-
-    
 //Text Rotate
 .txt-rotate
     background: linear-gradient(to right, #C33764 0%, #1D2671 100%)
@@ -52,13 +53,13 @@ li
     -webkit-text-fill-color: transparent
 
 .title  
-    font-size: 4em
-    padding-top: 1.2em
+    font-size: 2em
+    padding-top: 1em
     left: 50%
 
 .text
-    margin-top: 2em
-    font-size: 1.3em
+    margin: 2em 1em 1em 1em
+    font-size: 0.8em
 
     p
         display: block
@@ -84,9 +85,7 @@ li
 
             h3
                 margin-bottom: 10em
-
-            
-    
+ 
         // Navigation Menu
         a
             display: inline-block
@@ -111,30 +110,6 @@ li
                     width: 98%
                     left: 0
 
-        .arrow, 
-        .arrow:before
-            position: absolute
-            bottom: 15px
-        
-        .arrow
-            width: 40px
-            height: 70px
-            box-shadow: inset 0 0 0 1px #4a569d
-            border-radius: 25px
-            bottom: 50px
-        
-        .arrow:before
-            content: ''
-            width: 8px
-            height: 8px
-            background: #4a569d
-            margin-left: -4px
-            top: 8px
-            border-radius: 4px
-            animation-duration: 1.5s
-            animation-iteration-count: infinite
-            animation-name: scroll
-
     #about
         position: relative
         text-align: center
@@ -158,8 +133,8 @@ li
 
         .photo
             display: block
-            width: 200px
-            height: 200px
+            width: 120px
+            height: 120px
             background: url(../images/lkameya.jpg) no-repeat 0 0 
             background-size: cover
             overflow: hidden
@@ -168,33 +143,7 @@ li
             border-radius: 100%
             margin-left: auto
             margin-right: auto
-            margin-top: 6em
-
-        .arrow, 
-        .arrow:before
-            position: absolute
-            left: 50%
-        
-
-        .arrow
-            width: 40px
-            height: 70px
-            box-shadow: inset 0 0 0 1px #4a569d
-            border-radius: 25px
-            bottom: 50px
-            margin: 0 auto
-        
-        .arrow:before
-            content: ''
-            width: 8px
-            height: 8px
-            background: #4a569d
-            margin-left: -4px
-            top: 8px
-            border-radius: 4px
-            animation-duration: 1.5s
-            animation-iteration-count: infinite
-            animation-name: scroll
+            margin-top: 3em
     
     #work
         position: relative
@@ -203,31 +152,6 @@ li
         height: 100%
         width: 100%
 
-        .arrow, 
-        .arrow:before
-            position: absolute
-            left: 50%
-        
-
-        .arrow
-            width: 40px
-            height: 70px
-            box-shadow: inset 0 0 0 1px #4a569d
-            border-radius: 25px
-            bottom: 50px
-            margin: 0 auto
-        
-        .arrow:before
-            content: ''
-            width: 8px
-            height: 8px
-            background: #4a569d
-            margin-left: -4px
-            top: 8px
-            border-radius: 4px
-            animation-duration: 1.5s
-            animation-iteration-count: infinite
-            animation-name: scroll
 
     #contact
         position: relative
@@ -238,6 +162,7 @@ li
 
         .social
             margin-top: 5em
+            padding: 0.2em
 
             span
                 color: #999999
@@ -288,18 +213,109 @@ li
                 font-size: 1em
                 
                         
+
+    .bounce 
+        -moz-animation: bounce 1s infinite
+        -webkit-animation: bounce 1s infinite
+        animation: bounce 1s infinite
+
+
+// TABLETS
+@media only screen and (min-width: 600px)
+    h1
+        font-size: 4em
+
+    h3
+        font-size: 1.5em
+
+    .title  
+        font-size: 4em
+        padding-top: 1.2em
+        left: 50%
+    
+    .text
+        margin-top: 2em
+        font-size: 1.3em
+
+
+    .container
+        height: 100%
+
+        #about
+            position: relative
+            text-align: center
+            color: #404040	
+            height: 100%
+            width: 100%
+
+            .overlay
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 0
+                right: 0
+                bottom: 0
+                left: 0
+                background: transparent
+                background: -moz-linear-gradient(bottom, rgba(114, 81, 109, 0.2) 85%, rgba(238, 238, 238, 1) 100%)
+                background: -webkit-linear-gradient(bottom, rgba(248, 248, 248, 0.2) 85%, rgba(248, 248, 248, 1) 100%)
+                background: linear-gradient(bottom, rgba(114, 81, 109, 0.2) 85%, #f8f8f8 100%)
+                z-index: -1
+
+            .photo
+                display: block
+                width: 200px
+                height: 200px
+                background: url(../images/lkameya.jpg) no-repeat 0 0 
+                background-size: cover
+                overflow: hidden
+                -webkit-border-radius: 50px
+                -moz-border-radius: 50px
+                border-radius: 100%
+                margin-left: auto
+                margin-right: auto
+                margin-top: 6em
+
+            
+
+        
+
+    
+    
+    
+// DESKTOP
+@media only screen and (min-width: 769px)
+    h1
+        font-size: 5em
+    h3
+        font-size: 1.3em
+    
+    ul 
+        text-align: center
+        margin-top: 5em
+
+    li
+        display: inline
+        padding: 0 1.2em
+        font-size: 1.2em
+        margin-left: 50px
+        width: 25%
+        letter-spacing: 0.10em
+        text-align: center
+    
+    .container
         .arrow, 
         .arrow:before
             position: absolute
-            top: 15px
-        
+            bottom: 15px
+    
         .arrow
             width: 40px
             height: 70px
             box-shadow: inset 0 0 0 1px #4a569d
             border-radius: 25px
-            top: 50px
-        
+            bottom: 50px
+    
         .arrow:before
             content: ''
             width: 8px
@@ -310,14 +326,10 @@ li
             border-radius: 4px
             animation-duration: 1.5s
             animation-iteration-count: infinite
-            animation-name: scrollTop
-
-    .bounce 
-        -moz-animation: bounce 1s infinite
-        -webkit-animation: bounce 1s infinite
-        animation: bounce 1s infinite
+            animation-name: scroll
 
     
+
 // Keyframes
 @keyframes bounce
     0%, 20%, 50%, 80%, 100%

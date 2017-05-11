@@ -395,56 +395,57 @@ window.onload = function () {
         ctx.fillStyle = triangle_gradient;
         ctx.fill();
 
-        //triangle group 2 ===========================================
-        // triangle 2.1
-        ctx.beginPath();
-        ctx.moveTo(rectX + (canvas.width - 40), rectY - 30);
-        ctx.lineTo(rectX + (canvas.width + 40), rectY + 190);
-        ctx.lineTo(rectX + (canvas.width - 450), rectY + 120);
-        ctx.fillStyle = triangle_gradient;
-        ctx.fill();
+        if (canvas.width > 600) {
+            //triangle group 2 ===========================================
+            // triangle 2.1
+            ctx.beginPath();
+            ctx.moveTo(rectX + (canvas.width - 40), rectY - 30);
+            ctx.lineTo(rectX + (canvas.width + 40), rectY + 190);
+            ctx.lineTo(rectX + (canvas.width - 450), rectY + 120);
+            ctx.fillStyle = triangle_gradient;
+            ctx.fill();
 
-        // triangle 2.2
-        ctx.beginPath();
-        ctx.moveTo(rectX3 + (canvas.width - 200), rectY3 - 240);
-        ctx.lineTo(rectX3 + (canvas.width + 80), rectY3 - 240);
-        ctx.lineTo(rectX3 + (canvas.width - 50), rectY3 + 460);
-        ctx.fillStyle = triangle_gradient;
-        ctx.fill();
+            // triangle 2.2
+            ctx.beginPath();
+            ctx.moveTo(rectX3 + (canvas.width - 200), rectY3 - 240);
+            ctx.lineTo(rectX3 + (canvas.width + 80), rectY3 - 240);
+            ctx.lineTo(rectX3 + (canvas.width - 50), rectY3 + 460);
+            ctx.fillStyle = triangle_gradient;
+            ctx.fill();
 
-        // triangle 2.3
-        ctx.beginPath();
-        ctx.moveTo(rectX2 + (canvas.width - 400), rectY2 + 140);
-        ctx.lineTo(rectX2 + (canvas.width + 20), rectY2 + 200);
-        ctx.lineTo(rectX2 + (canvas.width - 350), rectY2 + 370);
-        ctx.fillStyle = triangle_gradient;
-        ctx.fill();
+            // triangle 2.3
+            ctx.beginPath();
+            ctx.moveTo(rectX2 + (canvas.width - 400), rectY2 + 140);
+            ctx.lineTo(rectX2 + (canvas.width + 20), rectY2 + 200);
+            ctx.lineTo(rectX2 + (canvas.width - 350), rectY2 + 370);
+            ctx.fillStyle = triangle_gradient;
+            ctx.fill();
 
-        //triangle group 3 ===========================================
-        // triangle 3.1
-        ctx.beginPath();
-        ctx.moveTo(rectX3 - 50, rectY3 + (canvas.height - 350));
-        ctx.lineTo(rectX3 + 350, rectY3 + (canvas.height - 220));
-        ctx.lineTo(rectX3 - 100, rectY3 + (canvas.height - 120));
-        ctx.fillStyle = triangle_gradient;
-        ctx.fill();
+            //triangle group 3 ===========================================
+            // triangle 3.1
+            ctx.beginPath();
+            ctx.moveTo(rectX3 - 50, rectY3 + (canvas.height - 350));
+            ctx.lineTo(rectX3 + 350, rectY3 + (canvas.height - 220));
+            ctx.lineTo(rectX3 - 100, rectY3 + (canvas.height - 120));
+            ctx.fillStyle = triangle_gradient;
+            ctx.fill();
 
-        // triangle 3.2
-        ctx.beginPath();
-        ctx.moveTo(rectX + 100, rectY + (canvas.height - 380));
-        ctx.lineTo(rectX + 320, rectY + (canvas.height - 180));
-        ctx.lineTo(rectX - 275, rectY + (canvas.height + 150));
-        ctx.fillStyle = triangle_gradient;
-        ctx.fill();
+            // triangle 3.2
+            ctx.beginPath();
+            ctx.moveTo(rectX + 100, rectY + (canvas.height - 380));
+            ctx.lineTo(rectX + 320, rectY + (canvas.height - 180));
+            ctx.lineTo(rectX - 275, rectY + (canvas.height + 150));
+            ctx.fillStyle = triangle_gradient;
+            ctx.fill();
 
-        // triangle 3.3
-        ctx.beginPath();
-        ctx.moveTo(rectX2 - 230, rectY2 + (canvas.height - 50));
-        ctx.lineTo(rectX2 + 215, rectY2 + (canvas.height - 110));
-        ctx.lineTo(rectX2 + 250, rectY2 + (canvas.height + 130));
-        ctx.fillStyle = triangle_gradient;
-        ctx.fill();
-
+            // triangle 3.3
+            ctx.beginPath();
+            ctx.moveTo(rectX2 - 230, rectY2 + (canvas.height - 50));
+            ctx.lineTo(rectX2 + 215, rectY2 + (canvas.height - 110));
+            ctx.lineTo(rectX2 + 250, rectY2 + (canvas.height + 130));
+            ctx.fillStyle = triangle_gradient;
+            ctx.fill();
+        }
         //triangle group 4 ===========================================
         // triangle 4.1
         ctx.beginPath();
@@ -523,60 +524,62 @@ window.onload = function () {
         ctx.fillStyle = triangle_gradient;
         ctx.fill();
 
-        // triangle 4.2
-        ctx.beginPath();
-        ctx.moveTo(rectX + (canvas.width - 100), rectY + (canvas.height - 160));
-        ctx.lineTo(rectX + (canvas.width - 30), rectY + (canvas.height + 90));
-        ctx.lineTo(rectX + (canvas.width - 420), rectY + (canvas.height + 60));
-        ctx.fillStyle = triangle_gradient;
-        ctx.fill();
+        if (canvas.width > 600) {
+            // triangle 4.2
+            ctx.beginPath();
+            ctx.moveTo(rectX + (canvas.width - 100), rectY + (canvas.height - 160));
+            ctx.lineTo(rectX + (canvas.width - 30), rectY + (canvas.height + 90));
+            ctx.lineTo(rectX + (canvas.width - 420), rectY + (canvas.height + 60));
+            ctx.fillStyle = triangle_gradient;
+            ctx.fill();
 
-        // triangle 4.3
-        ctx.beginPath();
-        ctx.moveTo(rectX2 + (canvas.width - 320), rectY2 + (canvas.height - 200));
-        ctx.lineTo(rectX2 + (canvas.width - 50), rectY2 + (canvas.height - 20));
-        ctx.lineTo(rectX2 + (canvas.width - 420), rectY2 + (canvas.height + 120));
-        ctx.fillStyle = triangle_gradient;
-        ctx.fill();
+            // triangle 4.3
+            ctx.beginPath();
+            ctx.moveTo(rectX2 + (canvas.width - 320), rectY2 + (canvas.height - 200));
+            ctx.lineTo(rectX2 + (canvas.width - 50), rectY2 + (canvas.height - 20));
+            ctx.lineTo(rectX2 + (canvas.width - 420), rectY2 + (canvas.height + 120));
+            ctx.fillStyle = triangle_gradient;
+            ctx.fill();
 
-        // triangle 4.4
-        ctx.beginPath();
-        ctx.moveTo(rectX4 + (canvas.width - 500), rectY4 + (canvas.height - 220));
-        ctx.lineTo(rectX4 + (canvas.width - 150), rectY4 + (canvas.height - 50));
-        ctx.lineTo(rectX4 + (canvas.width - 720), rectY4 + (canvas.height + 90));
-        ctx.fillStyle = triangle_gradient;
-        ctx.fill();
+            // triangle 4.4
+            ctx.beginPath();
+            ctx.moveTo(rectX4 + (canvas.width - 500), rectY4 + (canvas.height - 220));
+            ctx.lineTo(rectX4 + (canvas.width - 150), rectY4 + (canvas.height - 50));
+            ctx.lineTo(rectX4 + (canvas.width - 720), rectY4 + (canvas.height + 90));
+            ctx.fillStyle = triangle_gradient;
+            ctx.fill();
 
-        ctx.beginPath();
-        ctx.moveTo(rectX5 + (canvas.width - canvas.width * 0.46), rectY5 + (canvas.height - canvas.height * 0.27));
-        ctx.lineTo(rectX5 + (canvas.width - canvas.width * 0.57), rectY5 + (canvas.height + canvas.height * 0.2));
-        ctx.lineTo(rectX5 + (canvas.width - canvas.width * 0.09), rectY5 + (canvas.height + canvas.height * 0.4));
-        ctx.fillStyle = triangle_gradient;
-        ctx.fill();
+            ctx.beginPath();
+            ctx.moveTo(rectX5 + (canvas.width - canvas.width * 0.46), rectY5 + (canvas.height - canvas.height * 0.27));
+            ctx.lineTo(rectX5 + (canvas.width - canvas.width * 0.57), rectY5 + (canvas.height + canvas.height * 0.2));
+            ctx.lineTo(rectX5 + (canvas.width - canvas.width * 0.09), rectY5 + (canvas.height + canvas.height * 0.4));
+            ctx.fillStyle = triangle_gradient;
+            ctx.fill();
 
-        //5
-        ctx.beginPath();
-        ctx.moveTo(rectX5 + (canvas.width - canvas.width * 0.40), rectY5 + (canvas.height - canvas.height * 0.27));
-        ctx.lineTo(rectX5 + (canvas.width - canvas.width * 0.63), rectY5 + (canvas.height + canvas.height * 0));
-        ctx.lineTo(rectX5 + (canvas.width - canvas.width * 0.38), rectY5 + (canvas.height + canvas.height * 0));
-        ctx.fillStyle = triangle_gradient;
-        ctx.fill();
+            //5
+            ctx.beginPath();
+            ctx.moveTo(rectX5 + (canvas.width - canvas.width * 0.40), rectY5 + (canvas.height - canvas.height * 0.27));
+            ctx.lineTo(rectX5 + (canvas.width - canvas.width * 0.63), rectY5 + (canvas.height + canvas.height * 0));
+            ctx.lineTo(rectX5 + (canvas.width - canvas.width * 0.38), rectY5 + (canvas.height + canvas.height * 0));
+            ctx.fillStyle = triangle_gradient;
+            ctx.fill();
 
-        //6
-        ctx.beginPath();
-        ctx.moveTo(rectX6 + (canvas.width - canvas.width * 0.55), rectY6 + (canvas.height - canvas.height * 0.25));
-        ctx.lineTo(rectX6 + (canvas.width - canvas.width * 0.72), rectY6 + (canvas.height + canvas.height * 0));
-        ctx.lineTo(rectX6 + (canvas.width - canvas.width * 0.43), rectY6 + (canvas.height + canvas.height * 0.15));
-        ctx.fillStyle = triangle_gradient;
-        ctx.fill();
+            //6
+            ctx.beginPath();
+            ctx.moveTo(rectX6 + (canvas.width - canvas.width * 0.55), rectY6 + (canvas.height - canvas.height * 0.25));
+            ctx.lineTo(rectX6 + (canvas.width - canvas.width * 0.72), rectY6 + (canvas.height + canvas.height * 0));
+            ctx.lineTo(rectX6 + (canvas.width - canvas.width * 0.43), rectY6 + (canvas.height + canvas.height * 0.15));
+            ctx.fillStyle = triangle_gradient;
+            ctx.fill();
 
-        //7
-        ctx.beginPath();
-        ctx.moveTo(rectX7 + (canvas.width - canvas.width * 0.70), rectY7 + (canvas.height - canvas.height * 0.35));
-        ctx.lineTo(rectX7 + (canvas.width - canvas.width * 0.88), rectY7 + (canvas.height - canvas.height * 0.06));
-        ctx.lineTo(rectX7 + (canvas.width - canvas.width * 0.65), rectY7 + (canvas.height + canvas.height * 0.35));
-        ctx.fillStyle = triangle_gradient;
-        ctx.fill();
+            //7
+            ctx.beginPath();
+            ctx.moveTo(rectX7 + (canvas.width - canvas.width * 0.70), rectY7 + (canvas.height - canvas.height * 0.35));
+            ctx.lineTo(rectX7 + (canvas.width - canvas.width * 0.88), rectY7 + (canvas.height - canvas.height * 0.06));
+            ctx.lineTo(rectX7 + (canvas.width - canvas.width * 0.65), rectY7 + (canvas.height + canvas.height * 0.35));
+            ctx.fillStyle = triangle_gradient;
+            ctx.fill();
+        }
 
         //8
         ctx.beginPath();
