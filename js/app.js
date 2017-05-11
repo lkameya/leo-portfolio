@@ -63,37 +63,41 @@ window.onload = () => {
     let delay = false;
     let i = 0;
     var numberPages = 4;
+    
 
-    $(document).on('mousewheel DOMMouseScroll', function (event) {
-        event.preventDefault();
+    if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
 
-        if (delay) return;
+        $(document).on('mousewheel DOMMouseScroll', function (event) {
+            event.preventDefault();
 
-        delay = true;
-        setTimeout(function () { delay = false }, 800);
+            if (delay) return;
 
-        let wd = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+            delay = true;
+            setTimeout(function () { delay = false }, 800);
 
-        let sections = document.getElementsByClassName('page');
-        console.log(wd);
-        if (wd < 0 && i < sections.length) {
-            i++;
-        } else if (i > 0) {
-            i--;
-        }
-        if (sections[i] !== undefined) {
-            TweenMax.to(window, 2, {
-                scrollTo: {
-                    y: sections[i].offsetTop
-                },
-                ease: Power2.easeOut
-            });
+            let wd = event.originalEvent.wheelDelta || -event.originalEvent.detail;
 
-            TweenMax.staggerFromTo(sections[i], 3, { opacity: 0 }, { opacity: 1 });
-            console.log("PASSEI");
-        }
+            let sections = document.getElementsByClassName('page');
+            console.log(wd);
+            if (wd < 0 && i < sections.length) {
+                i++;
+            } else if (i > 0) {
+                i--;
+            }
+            if (sections[i] !== undefined) {
+                TweenMax.to(window, 2, {
+                    scrollTo: {
+                        y: sections[i].offsetTop
+                    },
+                    ease: Power2.easeOut
+                });
 
-    });
+
+            }
+
+        });
+        // some code..
+    }
 
 
 
