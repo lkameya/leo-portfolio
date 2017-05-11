@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="./css/app.css" type="text/css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700" rel="stylesheet">
 </head>
 
@@ -42,6 +43,8 @@
         </section>
 
         <section id="about" class="page">
+            <div class="overlay"></div>
+            <canvas id="hero-canvas"></canvas>
             <div>
                 <h1 class="title"> About me</h1>
             </div>
@@ -49,12 +52,19 @@
             <div class="photo"></div>
 
             <div class="text">
-                <p>
-                    HDOIAWHDAWDHIWODHWIODHWOIWHDI
-                </p>
+                <p>Hello! Nice to meet you! </p>
+                <p>I'm a full stack developer who has been working mainly with .net since 2010.</p>
+                <p>As an agnostic developer, I love learning new stuff to bring the best of technology to your daily life!</p>
+                <br>
+                <p>There's a lot of things I'm engaging right now.</p>
+                <p>Currently I'm taking my time to learn python and machine learning.</p>
+                <br>
+                <p>Besides IT, my passion goes through music and languages.</p>
+                <p>My next goal is to record an album as a singer</p>
+                <p>... and to speak Chinese and French fluently.</p>
             </div>
 
-            
+
             <div class="arrow bounce scroll">
                 <a class="arrow-down" href="#work"></a>
                 <div class="divider"></div>
@@ -62,6 +72,8 @@
         </section>
 
         <section id="work" class="page">
+            <div class="overlay"></div>
+            <canvas id="work-canvas"></canvas>
             <h1 class="title"> Work </h1>
 
             <div class="arrow bounce scroll">
@@ -71,8 +83,31 @@
         </section>
 
         <section id="contact" class="page">
-            <h1 class="title"> Contact </h1>
+            <div class="overlay"></div>
+            <canvas id="contact-canvas"></canvas>
+            <h1 class="title"> Get in touch </h1>
+            <div class="text">
+                <p>I'm looking for new opportunities!</p>
+                <p>If you have some, feel free to contact me!</p>
+                <br>
+                
+                <p>You can also send me a message if you want to talk about technology,</p>
+                <p>singing together, or practicing English, French and Portuguese! </p>
+                <br>
+                <br>
+                <p><a href="mailto:leonardo.kameya@gmail.com" class="mail">
+                    <span class="text">leonardo.kameya@gmail.com</span>
+                </a>
+                    
+                </p>
+            </div>
 
+            <div class="social">
+                <span><a href="https://linkedin.com/in/lkameya" target="_blank"><i class="fa fa-linkedin"></i></a></span>
+                <span><a href="https://github.com/lkameya" target="_blank"><i class="fa fa-github"></i></a></span>
+                <span><a href="https://facebook.com/lkameya" target="_blank"><i class="fa fa-facebook"></i></a></span>
+                <span><a href="https://youtube.com/user/lkameya" target="_blank"><i class="fa fa-youtube"></i></a></span>
+            </div>
         </section>
 
 
@@ -80,13 +115,11 @@
 
         </footer>
     </div>
-
     <script src="https://rawgit.com/akm2/simplex-noise.js/master/simplex-noise.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js"></script>
-
     <script type="text/javascript" src="./js/app-min.js"></script>
 </body>
 

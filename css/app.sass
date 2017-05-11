@@ -27,7 +27,7 @@ h1
     line-height: 1.1em
 
 h3
-    font-size: 1.2em
+    font-size: 1.3em
     
 ul 
     text-align: center
@@ -42,18 +42,7 @@ li
     letter-spacing: 0.10em
     text-align: center
 
-.photo
-    display: block
-    width: 200px
-    height: 200px
-    background: url(../images/lkameya.jpg) no-repeat 0 0 
-    background-size: cover
-    overflow: hidden
-    -webkit-border-radius: 50px
-    -moz-border-radius: 50px
-    border-radius: 100%
-    margin-left: auto
-    margin-right: auto
+
     
 //Text Rotate
 .txt-rotate
@@ -64,7 +53,16 @@ li
 
 .title  
     font-size: 4em
+    padding-top: 1.5em
     left: 50%
+
+.text
+    margin-top: 2em
+    font-size: 1.5em
+
+    p
+        display: block
+        line-height: 1.6em
 
 .container
     height: 100%
@@ -144,11 +142,40 @@ li
         height: 100%
         width: 100%
 
+        .overlay
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            background: transparent
+            background: -moz-linear-gradient(bottom, rgba(114, 81, 109, 0.2) 85%, rgba(238, 238, 238, 1) 100%)
+            background: -webkit-linear-gradient(bottom, rgba(248, 248, 248, 0.2) 85%, rgba(248, 248, 248, 1) 100%)
+            background: linear-gradient(bottom, rgba(114, 81, 109, 0.2) 85%, #f8f8f8 100%)
+            z-index: -1
+
+        .photo
+            display: block
+            width: 200px
+            height: 200px
+            background: url(../images/lkameya.jpg) no-repeat 0 0 
+            background-size: cover
+            overflow: hidden
+            -webkit-border-radius: 50px
+            -moz-border-radius: 50px
+            border-radius: 100%
+            margin-left: auto
+            margin-right: auto
+            margin-top: 6em
+
         .arrow, 
         .arrow:before
             position: absolute
-            bottom: 15px
+            left: 50%
         
+
         .arrow
             width: 40px
             height: 70px
@@ -170,25 +197,25 @@ li
             animation-name: scroll
     
     #work
+        position: relative
         text-align: center
         color: #404040	
         height: 100%
-        display: flex
-        align-items: center
-        justify-content: center
-        position: relative
+        width: 100%
 
         .arrow, 
         .arrow:before
             position: absolute
-            bottom: 15px
+            left: 50%
         
+
         .arrow
             width: 40px
             height: 70px
             box-shadow: inset 0 0 0 1px #4a569d
             border-radius: 25px
             bottom: 50px
+            margin: 0 auto
         
         .arrow:before
             content: ''
@@ -203,14 +230,64 @@ li
             animation-name: scroll
 
     #contact
+        position: relative
         text-align: center
         color: #404040	
         height: 100%
-        display: flex
-        align-items: center
-        justify-content: center
-        position: relative
+        width: 100%
 
+        .social
+            margin-top: 5em
+
+            span
+                color: #999999
+                margin-bottom: 0
+                font-size: 2em
+                line-height: 100%
+                max-width: 20em
+
+                a
+                    display: inline-block
+                    font-size: 2em
+                    color: rgba(100, 32, 200, 0.4)
+                    margin: 0 1em
+                    transform: rotateY(0deg)
+                    transition: transform 0.2s ease-in-out, color 0.2s linear
+
+                    &:hover
+                        color: rgba(163, 32, 109, 1)
+                        transform: rotateY(360deg)
+                        transition: transform 0.6s ease-in-out, color 0.4s linear
+
+        .text 
+            margin-top: 5em
+            position: relative
+
+            a
+                position: relative
+
+                &:after
+                    background: none repeat scroll 0 0 transparent
+                    bottom: -0.2em
+                    content: ""
+                    display: block
+                    height: 2px
+                    left: 50%
+                    position: absolute
+                    background: #C33764
+                    transition: width 0.3s ease 0s, left 0.3s ease 0s
+                    width: 0
+            
+                &:hover 
+                    &:after
+                        width: 98%
+                        left: 0
+
+            span
+                color: rgb(85, 26, 139)
+                font-size: 1em
+                
+                        
         .arrow, 
         .arrow:before
             position: absolute
