@@ -9,27 +9,30 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Leo Kameya - Software Developer</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="./css/app.css" type="text/css" rel="stylesheet" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700" rel="stylesheet">
 </head>
 
 <body>
+    <canvas id='c'></canvas>
     <div class="container">
         <section id="intro" class="page">
             <section class="hero">
                 <h1> I'm a Software Developer <br>who works with <br /><span class="txt-rotate" data-rotate='[".net", "c#", "javascript", "es6", "html5", "css3", "react", "redux"]'
                         data-period="1000"></span></h1>
-                <h3> Hi! I'm Leo Kameya, 27 years old software developer and web designer based in Campo Grande, Brazil.</h3>
+                <h3> Hi! I'm Leo Kameya, 27 years old, software developer and web designer based in Campo Grande, Brazil.</h3>
 
                 <nav>
                     <ul>
-                        <li><a class="scroll" href="#about">about</a></li>
-                        <li><a href="#work">work</a></li>
-                        <li><a href="#contact">contact</a></li>
+                        <li><a class="scrollClick" href="#about">about</a></li>
+                        <li><a class="scrollClick" href="#work">skills</a></li>
+                        <li><a class="scrollClick" href="#contact">contact</a></li>
                     </ul>
                 </nav>
             </section>
@@ -41,14 +44,25 @@
         </section>
 
         <section id="about" class="page">
+            <div class="overlay"></div>
+            <canvas id="hero-canvas"></canvas>
             <div>
                 <h1 class="title"> About me</h1>
             </div>
 
+            <div class="photo"></div>
+
             <div class="text">
-                <p>
-                    HDOIAWHDAWDHIWODHWIODHWOIWHDI
-                </p>
+                <p>Hello! Nice to meet you! </p>
+                <p>I'm a full stack developer who has been working mainly with .net since 2010.</p>
+                <p>As an agnostic developer, I love learning new stuff to bring the best of technology to your daily life!</p>
+                <br>
+                <p>There's a lot of things I'm engaging right now.</p>
+                <p>Currently I'm taking my time to learn python and machine learning.</p>
+                <br>
+                <p>Besides IT, my passion goes through music and languages.</p>
+                <p>My next goal is to record an album as a singer</p>
+                <p>... and to speak Mandarin Chinese and French fluently.</p>
             </div>
 
 
@@ -59,7 +73,162 @@
         </section>
 
         <section id="work" class="page">
-            <h1 class="title"> Work </h1>
+            <div class="overlay"></div>
+            <canvas id="work-canvas"></canvas>
+            <h1 class="title"> Skills </h1>
+            <div class="intro-block">
+                <div class="centerfold-wrap">
+                    <div class="hex-master-wrap">
+                        <div class="grid-1">
+                            <div class="hex-wrap" data-title=".net" data-content="backend-desc" data-color="#672d79">
+                                <div class="hex-init net"></div>
+                                <div class="hex-borders">
+                                    <div class="border-1"></div>
+                                    <div class="border-2"></div>
+                                    <div class="border-3"></div>
+                                </div>
+                                <div class="skillName">.net</div>
+                                <div class="hexagon">
+                                    <div class="hex-inner-1">
+                                        <div class="hex-inner-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hex-wrap" data-title="javascript" data-content="frontend-desc" data-color="#16A085">
+                                <div class="hex-init js"></div>
+                                <div class="hex-borders">
+                                    <div class="border-1"></div>
+                                    <div class="border-2"></div>
+                                    <div class="border-3"></div>
+                                </div>
+                                <div class="skillName">js</div>
+                                <div class="hexagon">
+                                    <div class="hex-inner-1">
+                                        <div class="hex-inner-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-2">
+                            <div class="hex-wrap" data-title="html5" data-content="html-desc" data-color="#f14a29">
+                                <div class="hex-init html5"></div>
+                                <div class="hex-borders">
+                                    <div class="border-1"></div>
+                                    <div class="border-2"></div>
+                                    <div class="border-3"></div>
+                                </div>
+                                <div class="skillName">html5</div>
+                                <div class="hexagon">
+                                    <div class="hex-inner-1">
+                                        <div class="hex-inner-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hex-wrap" data-title="css3" data-content="css-desc" data-color="#3b5998">
+                                <div class="hex-init css3"></div>
+                                <div class="hex-borders">
+                                    <div class="border-1"></div>
+                                    <div class="border-2"></div>
+                                    <div class="border-3"></div>
+                                </div>
+                                <div class="skillName">css3</div>
+                                <div class="hexagon">
+                                    <div class="hex-inner-1">
+                                        <div class="hex-inner-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hex-wrap" data-title="react" data-content="javascript-desc" data-color="#1da1f2">
+                                <div class="hex-init react"></div>
+                                <div class="hex-borders">
+                                    <div class="border-1"></div>
+                                    <div class="border-2"></div>
+                                    <div class="border-3"></div>
+                                </div>
+                                <div class="skillName">react</div>
+                                <div class="hexagon">
+                                    <div class="hex-inner-1">
+                                        <div class="hex-inner-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-3">
+                            <div class="hex-wrap" data-title="mobile" data-content="gui-desc" data-color="#2C3E52">
+                                <div class="hex-init mobile"></div>
+                                <div class="hex-borders">
+                                    <div class="border-1"></div>
+                                    <div class="border-2"></div>
+                                    <div class="border-3"></div>
+                                </div>
+                                <div class="skillName">mobile</div>
+                                <div class="hexagon">
+                                    <div class="hex-inner-1">
+                                        <div class="hex-inner-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hex-wrap" data-title="design" data-content="seo-desc" data-color="#C0392B">
+                                <div class="hex-init design"></div>
+                                <div class="hex-borders">
+                                    <div class="border-1"></div>
+                                    <div class="border-2"></div>
+                                    <div class="border-3"></div>
+                                </div>
+                                <div class="skillName">design</div>
+                                <div class="hexagon">
+                                    <div class="hex-inner-1">
+                                        <div class="hex-inner-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="code-display">
+                        <div class="code-description">
+                            <div class="backend-desc">
+                                <p class="code-title"></p>
+                                <p class="tags">WebForms and MVC</p>
+                                <div class="code-icon"></div>
+                            </div>
+                            <div class="frontend-desc">
+                                <p class="code-title"></p>
+                                <p class="tags">EcmaScript 6</p>
+                                <div class="code-icon"></div>
+                            </div>
+                            <div class="html-desc">
+                                <p class="code-title"></p>
+                                <p class="tags">New semantic tags</p>
+                                <div class="code-icon"></div>
+                            </div>
+                            <div class="css-desc">
+                                <p class="code-title"></p>
+                                <p class="tags">Bootstrap</p>
+                                <div class="code-icon"></div>
+                            </div>
+                            <div class="javascript-desc">
+                                <p class="code-title"></p>
+                                <p class="tags">Redux </p>
+                                <div class="code-icon"></div>
+                            </div>
+                            <div class="gui-desc">
+                                <p class="code-title"></p>
+                                <p class="tags">React Native </p>
+                                <div class="code-icon"></div>
+                            </div>
+                            <div class="seo-desc">
+                                <p class="code-title"></p>
+                                <p class="tags">sketch </p>
+                                <div class="code-icon"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="hoverblock"></div>
+                </div>
+                <!-- End Centerfold-Wrap -->
+            </div>
 
             <div class="arrow bounce scroll">
                 <a class="arrow-down" href="#contact"></a>
@@ -68,8 +237,32 @@
         </section>
 
         <section id="contact" class="page">
-            <h1 class="title"> Contact </h1>
+            <div class="overlay"></div>
+            <canvas id="contact-canvas"></canvas>
+            <h1 class="title"> Get in touch </h1>
+            <div class="text">
+                <p>I'm looking for remote jobs!</p>
+                <p>If you have any, feel free to contact me!</p>
+                <br>
 
+                <p>You can also send me a message if you want to talk about technology,</p>
+                <p>join in a music session, or practicing English, French and Portuguese! </p>
+                <br>
+                <br>
+                <p>
+                    <a href="mailto:leonardo.kameya@gmail.com" class="mail">
+                        <span>leonardo.kameya@gmail.com</span>
+                    </a>
+
+                </p>
+            </div>
+
+            <div class="social">
+                <span><a href="https://linkedin.com/in/lkameya" target="_blank" alt="LinkedIn" <i class="fa fa-linkedin"></i></a></span>
+                <span><a href="https://github.com/lkameya" target="_blank" alt="Github"><i class="fa fa-github"></i></a></span>
+                <span><a href="https://facebook.com/leonardo.kameya" target="_blank" alt="Facebook"><i class="fa fa-facebook"></i></a></span>
+                <span><a href="https://youtube.com/user/lkameya" target="_blank" alt="Youtube"><i class="fa fa-youtube"></i></a></span>
+            </div>
         </section>
 
 
@@ -77,12 +270,14 @@
 
         </footer>
     </div>
-
+    <script src="https://rawgit.com/akm2/simplex-noise.js/master/simplex-noise.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js"></script>
-
     <script type="text/javascript" src="./js/app-min.js"></script>
 </body>
 

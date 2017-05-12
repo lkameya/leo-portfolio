@@ -81,6 +81,21 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/src\/images\/favicon.ico": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/src\/images\/favicon.ico",
+		"oF": 0
+		},
+	"\/src\/images\/lkameya.jpg": {
+		"ft": 16384,
+		"iS": 141609,
+		"oA": 0,
+		"oAP": "\/src\/images\/lkameya.jpg",
+		"oF": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/src\/index.html": {
 		"ft": 8192,
 		"oA": 2,
