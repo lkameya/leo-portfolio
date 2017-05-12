@@ -78,21 +78,19 @@ window.onload = function () {
     var numberPages = 4;
 
     if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-
         $(document).on('mousewheel DOMMouseScroll', function (event) {
             event.preventDefault();
-
             if (delay) return;
 
             delay = true;
             setTimeout(function () {
                 delay = false;
-            }, 2000);
+            }, 1800);
 
             var wd = event.originalEvent.wheelDelta || -event.originalEvent.detail;
 
             var sections = document.getElementsByClassName('page');
-            console.log(wd);
+
             if (wd < 0 && i < sections.length) {
                 i++;
             } else if (i > 0) {
@@ -107,7 +105,6 @@ window.onload = function () {
                 });
             }
         });
-        // some code..
     }
 
     // SCROLL LINKS ON CLICK
@@ -374,23 +371,25 @@ window.onload = function () {
         //triangle group 1 ===========================================
         // triangle 1.1
 
-
+        /*
         //triangle 1.2
         ctx.beginPath();
         ctx.moveTo(rectX - 50, rectY - 25);
         ctx.lineTo(rectX + 270, rectY + 25);
         ctx.lineTo(rectX - 50, rectY + 195);
         ctx.fillStyle = triangle_gradient;
-        ctx.fill();
+        ctx.fill();*/
 
         if (canvas.width > 600) {
 
+            /*
             ctx.beginPath();
             ctx.moveTo(rectX2 + 120, rectY2 - 100);
             ctx.lineTo(rectX2 + 460, rectY2 + 80);
             ctx.lineTo(rectX2 + 26, rectY2 + 185);
             ctx.fillStyle = triangle_gradient;
             ctx.fill();
+            
             //triangle 1.3
             ctx.beginPath();
             ctx.moveTo(rectX3 - 140, rectY3 - 150);
@@ -398,8 +397,8 @@ window.onload = function () {
             ctx.lineTo(rectX3 - 225, rectY3 - 50);
             ctx.fillStyle = triangle_gradient;
             ctx.fill();
-
-            //triangle group 2 ===========================================
+             
+             //triangle group 2 ===========================================
             // triangle 2.1
             ctx.beginPath();
             ctx.moveTo(rectX + (canvas.width - 40), rectY - 30);
@@ -407,23 +406,21 @@ window.onload = function () {
             ctx.lineTo(rectX + (canvas.width - 450), rectY + 120);
             ctx.fillStyle = triangle_gradient;
             ctx.fill();
-
-            // triangle 2.2
+             // triangle 2.2
             ctx.beginPath();
             ctx.moveTo(rectX3 + (canvas.width - 200), rectY3 - 240);
             ctx.lineTo(rectX3 + (canvas.width + 80), rectY3 - 240);
             ctx.lineTo(rectX3 + (canvas.width - 50), rectY3 + 460);
             ctx.fillStyle = triangle_gradient;
             ctx.fill();
-
-            // triangle 2.3
+             // triangle 2.3
             ctx.beginPath();
             ctx.moveTo(rectX2 + (canvas.width - 400), rectY2 + 140);
             ctx.lineTo(rectX2 + (canvas.width + 20), rectY2 + 200);
             ctx.lineTo(rectX2 + (canvas.width - 350), rectY2 + 370);
             ctx.fillStyle = triangle_gradient;
             ctx.fill();
-
+             */
             //triangle group 3 ===========================================
             // triangle 3.1
             ctx.beginPath();
@@ -606,4 +603,34 @@ window.onload = function () {
     //call init
     init2();
     animate();
+
+    function hex_initial_animation() {
+        $(".hex-wrap").velocity("callout.pulse").velocity({ opacity: 0.5 });
+        $(".hoverblock").velocity("fadeOut", { delay: 3000, duration: 0 });
+    }
+
+    hex_initial_animation();
+
+    $(".skillName").mouseenter(function () {
+        var title_color = $(this).parent().attr("data-color");
+        var title_name = $(this).parent().attr("data-title");
+        var desc_name = $(this).parent().attr("data-content");
+
+        function hex_description() {
+            $('.code-description').velocity('stop', true).velocity("transition.slideRightBigIn");
+            $('.' + desc_name).siblings().removeClass('desc-active');
+            setTimeout(function () {
+                $('.' + desc_name).addClass('desc-active');
+                $('.code-descriptopn > div, .desc-active').children().velocity('stop', true).velocity("transition.slideRightBigIn", { stagger: 300 });
+                $('.code-title, .desc-active span').velocity({ color: title_color }, { queue: false });
+                $('.code-title').text(title_name);
+            }, 0);
+        }
+        hex_description();
+
+        $(this).parent().addClass('hexactive');
+        $('.hexactive').velocity({ scaleX: "1.1", scaleY: "1.1", opacity: 1 }, { duration: 200 });
+    }).mouseleave(function () {
+        $('.hexactive').velocity('reverse').removeClass('hexactive');
+    });
 };

@@ -8,7 +8,8 @@ body
     background-color: #f8f8f8
     font-size: 16px
     font-family: 'Work Sans', sans-serif
-    overflow: scroll
+    overflow-y: scroll
+    overflow-x: hidden
     -webkit-user-select: none
     -moz-user-select: none
     -o-user-select: none
@@ -53,6 +54,7 @@ li
 
 .title  
     font-size: 2em
+    text-align: center
     padding-top: 1em
     left: 50%
 
@@ -147,10 +149,295 @@ li
     
     #work
         position: relative
-        text-align: center
         color: #404040	
         height: 100%
         width: 100%
+
+        .intro-block 
+            position: relative
+            align-items: center
+            height: 100%
+            margin-top: 1.5em
+
+        .hex-bg-big-text 
+            position: absolute
+            z-index: -1
+            height: 100%
+            width: 100%
+            
+
+        .centerfold-wrap 
+            position: relative
+            //display: flex
+            //justify-content: center
+            //align-items: center
+            //flex: 1
+            
+
+        .hoverblock 
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%            
+            height: 100%
+            
+        .code-display 
+            position: relative
+            color: #f6f6f6
+            width: 600px
+            height: 260px
+
+        .code-display h1 
+            color: #333
+
+
+        .code-description 
+            width: 100%
+            height: 100%
+            color: #333
+
+
+        .code-description * 
+            display: none
+
+
+        .code-description > div 
+            padding: 0px 40px
+            font-size: 26px
+                
+                
+        .desc-active 
+            display: block
+            /*height: 100%*/
+            position: relative
+        
+
+        .desc-active > p 
+            display: block
+            margin: 0
+
+
+        .desc-active > p > span 
+            display: inline-block
+            /* font-weight: bold */
+            width: 125px
+
+
+        p.code-title 
+            position: relative
+            font-size: 6rem
+
+
+        .desc-active::after 
+            position: absolute
+            height: 100%
+            width: 100%
+            top: 0
+            left: 0
+            content: ""
+            opacity: .2
+            z-index: -1
+
+
+        .hex-master-wrap 
+            position: relative
+            display: block
+
+
+        .border-1,
+        .border-2,
+        .border-3 
+            position: absolute
+            width: 100%
+            top: 46px
+            left: 0
+            z-index: 2
+            -webkit-backface-visibility: hidden
+            backface-visibility: hidden
+
+
+        .border-2 
+            transform: rotate(60deg)
+
+
+        .border-3 
+            transform: rotate(120deg)
+
+
+        .border-3::before 
+            display: none
+            position: absolute
+            content: ""
+            bottom: 10%
+            left: 42px
+            width: 50%
+            height: 83%
+            background-color: rgba(255, 255, 255, 0)
+            border-top: 1px solid
+            border-bottom: 1px solid
+            border-color: white
+            border-radius: 50%
+            visibility: visible
+            z-index: -1
+            /* transform: rotate(60deg) */
+
+
+        .intro-block .grid-1,
+        .intro-block .grid-2,
+        .intro-block .grid-3 
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 75%
+            margin: 0 auto
+            margin-bottom: -50px
+
+
+        .intro-block .grid-3 
+            margin-bottom: -50px
+
+
+        .intro-block .grid-2,
+        .intro-block .grid-3 
+            margin-top: -50px
+
+
+        .hex-wrap 
+            position: relative
+            width: 4.2em
+            height: 7.2em
+            margin: 0 0.6em 0.6em 0
+            border-top-left-radius: 100%
+            border-top-right-radius: 100%
+            border-bottom-left-radius: 100%
+            border-bottom-right-radius: 100%
+            border: 0px solid
+            transform: scale(1.1)
+
+
+        .hex-wrap .label 
+            position: absolute
+            top: 16px
+            left: 0
+            right: 0
+            bottom: 0
+            margin: auto
+            width: 100%
+            height: 58px
+            color: #f6f6f6
+            display: flex
+            justify-content: center
+            align-items: center
+            z-index: 3
+
+
+        .hex-wrap .label svg, .hex-wrap .label img 
+            height: 30px
+            width: 30px
+            -webkit-backface-visibility: hidden
+            backface-visibility: hidden
+
+
+        .hexagon 
+            width: 400px
+            height: 150px
+            margin: 15px 0 0 -75px
+            overflow: hidden
+            visibility: hidden
+            -webkit-transform: rotate(120deg)
+            -moz-transform: rotate(120deg)
+            -ms-transform: rotate(120deg)
+            -o-transform: rotate(120deg)
+            transform: rotate(90deg)
+            cursor: pointer
+            -webkit-backface-visibility: hidden
+            backface-visibility: hidden
+
+
+        .hex-inner-1 
+            overflow: hidden
+            width: 100%
+            height: 100%
+            -webkit-backface-visibility: hidden
+            backface-visibility: hidden
+            -webkit-transform: rotate(-60deg)
+            -moz-transform: rotate(-60deg)
+            -ms-transform: rotate(-60deg)
+            -o-transform: rotate(-60deg)
+            transform: rotate(-60deg)
+
+
+        .hex-inner-2 
+            position: relative
+            width: 100%
+            height: 100%
+            background-repeat: no-repeat
+            background-position: 50%
+            /* background-image: url(http://placekitten.com/240/240) */
+            visibility: visible
+            -webkit-backface-visibility: hidden
+            backface-visibility: hidden
+            -webkit-transform: rotate(-60deg)
+            -moz-transform: rotate(-60deg)
+            -ms-transform: rotate(-60deg)
+            -o-transform: rotate(-60deg)
+            transform: rotate(-60deg)
+            overflow: hidden
+
+        .hex-inner-2::before, .hex-inner-2::after 
+            position: absolute
+            background-repeat: no-repeat
+            background-position: 50%
+            background-size: contain
+            top: 0
+            left: 0
+            height: 110%
+            width: 110%
+            content: ""
+            -webkit-transform: rotate(30deg)
+            transform: rotate(30deg)
+
+        
+        .hex-init 
+            position: absolute
+            top: 50px
+            left: 7px
+            height: 26%
+            width: 80%
+            z-index: 9
+            transform: rotate(-60deg)
+            cursor: pointer
+
+            .net
+                background-color: #672d79
+
+
+        .hex-init::after 
+            width: 100%
+            height: 100%
+            display: block
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            margin: auto
+            content: ""
+            transform: rotate(-60deg)
+
+        .hex-init::before 
+            width: 100%
+            height: 100%
+            display: block
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            margin: auto
+            content: ""
+            transform: rotate(60deg)
+
 
 
     #contact
@@ -278,7 +565,304 @@ li
                 margin-left: auto
                 margin-right: auto
 
-        
+        #work
+            .intro-block 
+                position: relative
+                align-items: center
+                height: 100%
+                margin-top: 5em
+
+            .hex-bg-big-text 
+                position: absolute
+                z-index: -1
+                height: 100%
+                width: 100%
+
+
+            .centerfold-wrap 
+                position: relative
+                display: flex
+                justify-content: center
+                align-items: center
+                flex: 1
+
+
+            .hoverblock 
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%            
+                height: 100%
+
+            .code-display 
+                position: relative
+                color: #f6f6f6
+                width: 600px
+                height: 260px
+                margin-left: 50px
+
+            .code-display h1 
+                color: #333
+
+
+            .code-description 
+                width: 100%
+                height: 100%
+                color: #333
+                
+
+
+            .code-description * 
+                display: none
+
+
+            .code-description > div 
+                padding: 0px 40px
+                font-size: 26px
+            
+            .code-description > div 
+                padding: 0px 40px
+                font-size: 26px
+                
+                p.tags
+                    margin-top: 30px
+                    color: #404040
+
+
+            .desc-active 
+                display: block
+                position: relative
+
+            .desc-active > p > span
+                margin-top: 30px 
+                display: inline
+
+
+            p.code-title 
+                position: relative
+                font-size: 6rem
+
+
+            .desc-active::after 
+                position: absolute
+                height: 100%
+                width: 100%
+                top: 50px
+                left: 0
+                content: ""
+                opacity: .2
+                z-index: -1
+                .hex-master-wrap 
+                    position: relative
+                    min-width: 225px
+                    height: 300px
+
+
+            .border-1,
+            .border-2,
+            .border-3 
+                position: absolute
+                width: 100%
+                top: 46px
+                left: 0
+                z-index: 2
+                -webkit-backface-visibility: hidden
+                backface-visibility: hidden
+
+
+            .border-2 
+                transform: rotate(60deg)
+
+
+            .border-3 
+                transform: rotate(120deg)
+
+
+            .border-3::before 
+                display: none
+                position: absolute
+                content: ""
+                bottom: 10%
+                left: 42px
+                width: 50%
+                height: 83%
+                background-color: rgba(255, 255, 255, 0)
+                border-top: 1px solid
+                border-bottom: 1px solid
+                border-color: white
+                border-radius: 50%
+                visibility: visible
+                z-index: -1
+                /* transform: rotate(60deg) */
+
+
+            .intro-block .grid-1,
+            .intro-block .grid-2,
+            .intro-block .grid-3 
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 75%
+                margin: 0 auto
+                margin-bottom: -50px
+
+
+            .intro-block .grid-3 
+                margin-bottom: -50px
+
+
+            .intro-block .grid-2,
+            .intro-block .grid-3 
+                margin-top: -50px
+
+
+            .hex-wrap 
+                position: relative
+                width: 150px
+                height: 190px
+                margin: 0 1em 0 0
+                border-top-left-radius: 100%
+                border-top-right-radius: 100%
+                border-bottom-left-radius: 100%
+                border-bottom-right-radius: 100%
+                border: 0px solid
+
+
+            .hex-wrap .skillName 
+                font-size: 2em
+                position: absolute
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+                margin: auto
+                width: 100%
+                height: 58px
+                color: #fff
+                display: flex
+                justify-content: center
+                align-items: center
+                z-index: 10
+                cursor: pointer
+
+            .hexagon 
+                width: 400px
+                height: 150px
+                margin: 15px 0 0 -75px
+                overflow: hidden
+                visibility: hidden
+                -webkit-transform: rotate(120deg)
+                -moz-transform: rotate(120deg)
+                -ms-transform: rotate(120deg)
+                -o-transform: rotate(120deg)
+                transform: rotate(90deg)
+                cursor: pointer
+                -webkit-backface-visibility: hidden
+                backface-visibility: hidden
+
+
+            .hex-inner-1 
+                overflow: hidden
+                width: 100%
+                height: 100%
+                -webkit-backface-visibility: hidden
+                backface-visibility: hidden
+                -webkit-transform: rotate(-60deg)
+                -moz-transform: rotate(-60deg)
+                -ms-transform: rotate(-60deg)
+                -o-transform: rotate(-60deg)
+                transform: rotate(-60deg)
+
+
+            .hex-inner-2 
+                position: relative
+                width: 100%
+                height: 100%
+                background-repeat: no-repeat
+                background-position: 50%
+                /* background-image: url(http://placekitten.com/240/240) */
+                visibility: visible
+                -webkit-backface-visibility: hidden
+                backface-visibility: hidden
+                -webkit-transform: rotate(-60deg)
+                -moz-transform: rotate(-60deg)
+                -ms-transform: rotate(-60deg)
+                -o-transform: rotate(-60deg)
+                transform: rotate(-60deg)
+                overflow: hidden
+
+            .hex-inner-2::before, .hex-inner-2::after 
+                position: absolute
+                background-repeat: no-repeat
+                background-position: 50%
+                background-size: contain
+                top: 0
+                left: 0
+                height: 110%
+                width: 110%
+                content: ""
+                -webkit-transform: rotate(30deg)
+                transform: rotate(30deg)
+
+            
+            .hex-init 
+                position: absolute
+                top: 46px
+                left: 0px
+                height: 46%
+                width: 100%
+                z-index: 9
+                transform: rotate(-60deg)
+                cursor: pointer
+
+            .net
+                background-color: #672d79
+
+            .js
+                background-color: #f5da55
+            
+            .html5
+                background-color: #f14a29
+
+            .css3
+                background-color: #3b5998
+
+            .react
+                background-color: #1da1f2
+
+            .mobile
+                background-color: #1da1f2
+
+            .design
+                background-color: #f14a29
+
+            .hex-init::after 
+                background-color: inherit
+                width: 100%
+                height: 100%
+                display: block
+                position: absolute
+                top: 0
+                bottom: 0
+                left: 0
+                right: 0
+                margin: auto
+                content: ""
+                transform: rotate(-60deg)
+
+            .hex-init::before 
+                background-color: inherit
+                width: 100%
+                height: 100%
+                display: block
+                position: absolute
+                top: 0
+                bottom: 0
+                left: 0
+                right: 0
+                margin: auto
+                content: ""
+                transform: rotate(60deg)
 
     
     
@@ -308,7 +892,6 @@ li
 
         #about, #work, #intro
             position: relative
-            text-align: center
             color: #404040	
             height: 100%
             width: 100%
@@ -351,7 +934,7 @@ li
 
                 span
                     color: #999999
-                    margin-bottom: 0
+                    margin: 0
                     font-size: 1.5em
                     line-height: 100%
                     max-width: 20em
