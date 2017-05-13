@@ -157,22 +157,15 @@ li
             position: relative
             align-items: center
             height: 100%
-            margin-top: 1.5em
 
         .hex-bg-big-text 
             position: absolute
             z-index: -1
             height: 100%
             width: 100%
-            
 
         .centerfold-wrap 
             position: relative
-            //display: flex
-            //justify-content: center
-            //align-items: center
-            //flex: 1
-            
 
         .hoverblock 
             position: absolute
@@ -180,12 +173,12 @@ li
             left: 0
             width: 100%            
             height: 100%
-            
+
         .code-display 
             position: relative
             color: #f6f6f6
-            width: 600px
-            height: 260px
+            width: 100%
+            margin-top: 100px
 
         .code-display h1 
             color: #333
@@ -195,53 +188,51 @@ li
             width: 100%
             height: 100%
             color: #333
-
-
+            
         .code-description * 
             display: none
 
 
         .code-description > div 
             padding: 0px 40px
-            font-size: 26px
-                
-                
+            font-size: 16px
+        
+        .code-description > div 
+            padding: 0px 40px
+            font-size: 16px
+            
+            p.tags
+                margin-top: 30px
+                color: #404040
+
+
         .desc-active 
             display: block
-            /*height: 100%*/
             position: relative
-        
 
-        .desc-active > p 
-            display: block
-            margin: 0
-
-
-        .desc-active > p > span 
-            display: inline-block
-            /* font-weight: bold */
-            width: 125px
+        .desc-active > p > span
+            margin-top: 30px 
+            display: inline
 
 
         p.code-title 
             position: relative
-            font-size: 6rem
+            font-size: 2em
 
 
         .desc-active::after 
             position: absolute
             height: 100%
             width: 100%
-            top: 0
+            top: 50px
             left: 0
             content: ""
             opacity: .2
             z-index: -1
-
-
-        .hex-master-wrap 
-            position: relative
-            display: block
+            .hex-master-wrap 
+                position: relative
+                min-width: 225px
+                height: 300px
 
 
         .border-1,
@@ -249,7 +240,7 @@ li
         .border-3 
             position: absolute
             width: 100%
-            top: 46px
+            top: 30px
             left: 0
             z-index: 2
             -webkit-backface-visibility: hidden
@@ -304,42 +295,35 @@ li
 
         .hex-wrap 
             position: relative
-            width: 4.2em
-            height: 7.2em
-            margin: 0 0.6em 0.6em 0
+            width: 70px
+            height: 90px
+            margin: 1em 0em 1em 0.5em
             border-top-left-radius: 100%
             border-top-right-radius: 100%
             border-bottom-left-radius: 100%
             border-bottom-right-radius: 100%
             border: 0px solid
-            transform: scale(1.1)
 
 
-        .hex-wrap .label 
+        .hex-wrap .skillName 
+            font-size: 1em
             position: absolute
-            top: 16px
+            top: 18px
             left: 0
             right: 0
             bottom: 0
             margin: auto
             width: 100%
-            height: 58px
-            color: #f6f6f6
+            height: 50px
+            color: #fff
             display: flex
             justify-content: center
             align-items: center
-            z-index: 3
-
-
-        .hex-wrap .label svg, .hex-wrap .label img 
-            height: 30px
-            width: 30px
-            -webkit-backface-visibility: hidden
-            backface-visibility: hidden
-
+            z-index: 10
+            cursor: pointer
 
         .hexagon 
-            width: 400px
+            width: 300px
             height: 150px
             margin: 15px 0 0 -75px
             overflow: hidden
@@ -400,19 +384,37 @@ li
         
         .hex-init 
             position: absolute
-            top: 50px
-            left: 7px
-            height: 26%
-            width: 80%
+            top: 36px
+            left: 0px
+            height: 46%
+            width: 100%
             z-index: 9
             transform: rotate(-60deg)
             cursor: pointer
 
-            .net
-                background-color: #672d79
+        .net
+            background-color: #672d79
 
+        .js
+            background-color: #f5da55
+        
+        .html5
+            background-color: #f14a29
+
+        .css3
+            background-color: #3b5998
+
+        .react
+            background-color: #1da1f2
+
+        .mobile
+            background-color: #1da1f2
+
+        .design
+            background-color: #f14a29
 
         .hex-init::after 
+            background-color: inherit
             width: 100%
             height: 100%
             display: block
@@ -426,6 +428,7 @@ li
             transform: rotate(-60deg)
 
         .hex-init::before 
+            background-color: inherit
             width: 100%
             height: 100%
             display: block

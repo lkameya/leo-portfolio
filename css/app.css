@@ -186,8 +186,7 @@ li {
     .container #work .intro-block {
       position: relative;
       align-items: center;
-      height: 100%;
-      margin-top: 1.5em; }
+      height: 100%; }
     .container #work .hex-bg-big-text {
       position: absolute;
       z-index: -1;
@@ -204,8 +203,8 @@ li {
     .container #work .code-display {
       position: relative;
       color: #f6f6f6;
-      width: 600px;
-      height: 260px; }
+      width: 100%;
+      margin-top: 100px; }
     .container #work .code-display h1 {
       color: #333; }
     .container #work .code-description {
@@ -216,39 +215,41 @@ li {
       display: none; }
     .container #work .code-description > div {
       padding: 0px 40px;
-      font-size: 26px; }
+      font-size: 16px; }
+    .container #work .code-description > div {
+      padding: 0px 40px;
+      font-size: 16px; }
+      .container #work .code-description > div p.tags {
+        margin-top: 30px;
+        color: #404040; }
     .container #work .desc-active {
       display: block;
-      /*height: 100%*/
       position: relative; }
-    .container #work .desc-active > p {
-      display: block;
-      margin: 0; }
     .container #work .desc-active > p > span {
-      display: inline-block;
-      /* font-weight: bold */
-      width: 125px; }
+      margin-top: 30px;
+      display: inline; }
     .container #work p.code-title {
       position: relative;
-      font-size: 6rem; }
+      font-size: 2em; }
     .container #work .desc-active::after {
       position: absolute;
       height: 100%;
       width: 100%;
-      top: 0;
+      top: 50px;
       left: 0;
       content: "";
       opacity: .2;
       z-index: -1; }
-    .container #work .hex-master-wrap {
-      position: relative;
-      display: block; }
+      .container #work .desc-active::after .hex-master-wrap {
+        position: relative;
+        min-width: 225px;
+        height: 300px; }
     .container #work .border-1,
     .container #work .border-2,
     .container #work .border-3 {
       position: absolute;
       width: 100%;
-      top: 46px;
+      top: 30px;
       left: 0;
       z-index: 2;
       -webkit-backface-visibility: hidden;
@@ -289,36 +290,32 @@ li {
       margin-top: -50px; }
     .container #work .hex-wrap {
       position: relative;
-      width: 4.2em;
-      height: 7.2em;
-      margin: 0 0.6em 0.6em 0;
+      width: 70px;
+      height: 90px;
+      margin: 1em 0em 1em 0.5em;
       border-top-left-radius: 100%;
       border-top-right-radius: 100%;
       border-bottom-left-radius: 100%;
       border-bottom-right-radius: 100%;
-      border: 0px solid;
-      transform: scale(1.1); }
-    .container #work .hex-wrap .label {
+      border: 0px solid; }
+    .container #work .hex-wrap .skillName {
+      font-size: 1em;
       position: absolute;
-      top: 16px;
+      top: 18px;
       left: 0;
       right: 0;
       bottom: 0;
       margin: auto;
       width: 100%;
-      height: 58px;
-      color: #f6f6f6;
+      height: 50px;
+      color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
-      z-index: 3; }
-    .container #work .hex-wrap .label svg, .container #work .hex-wrap .label img {
-      height: 30px;
-      width: 30px;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden; }
+      z-index: 10;
+      cursor: pointer; }
     .container #work .hexagon {
-      width: 400px;
+      width: 300px;
       height: 150px;
       margin: 15px 0 0 -75px;
       overflow: hidden;
@@ -372,16 +369,29 @@ li {
       transform: rotate(30deg); }
     .container #work .hex-init {
       position: absolute;
-      top: 50px;
-      left: 7px;
-      height: 26%;
-      width: 80%;
+      top: 36px;
+      left: 0px;
+      height: 46%;
+      width: 100%;
       z-index: 9;
       transform: rotate(-60deg);
       cursor: pointer; }
-      .container #work .hex-init .net {
-        background-color: #672d79; }
+    .container #work .net {
+      background-color: #672d79; }
+    .container #work .js {
+      background-color: #f5da55; }
+    .container #work .html5 {
+      background-color: #f14a29; }
+    .container #work .css3 {
+      background-color: #3b5998; }
+    .container #work .react {
+      background-color: #1da1f2; }
+    .container #work .mobile {
+      background-color: #1da1f2; }
+    .container #work .design {
+      background-color: #f14a29; }
     .container #work .hex-init::after {
+      background-color: inherit;
       width: 100%;
       height: 100%;
       display: block;
@@ -394,6 +404,7 @@ li {
       content: "";
       transform: rotate(-60deg); }
     .container #work .hex-init::before {
+      background-color: inherit;
       width: 100%;
       height: 100%;
       display: block;
