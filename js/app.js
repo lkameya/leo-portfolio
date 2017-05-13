@@ -8,6 +8,7 @@ class TxtRotate {
         this.txt = '';
         this.isDeleting = false;
         this.tick();
+
     }
 
     tick() {
@@ -43,8 +44,6 @@ class TxtRotate {
 }
 
 window.onload = () => {
-
-
     let elements = document.getElementsByClassName('txt-rotate');
     for (let i = 0; i < elements.length; i++) {
         let toRotate = elements[i].getAttribute('data-rotate');
@@ -59,11 +58,9 @@ window.onload = () => {
     css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
     document.body.appendChild(css);
 
-
     // SCROLL LINKS ON WHEEL
     let delay = false;
     let i = 0;
-    var numberPages = 4;
 
     if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
         $(document).on('mousewheel DOMMouseScroll', function (event) {
@@ -115,6 +112,7 @@ window.onload = () => {
             });
         });
     });
+
 
     //  Intro Background Canvas
     window.requestAnimationFrame = (() => {
@@ -212,7 +210,6 @@ window.onload = () => {
     }
 
     const initParticle = (p) => {
-        console.log(screenHeight * numberPages);
         p.x = p.pastX = screenWidth * Math.random();
         p.y = p.pastY = (screenHeight) * Math.random();
         p.color.h = hueBase + Math.atan2(centerY - p.y, centerX - p.x) * 180 / Math.PI;
@@ -258,9 +255,6 @@ window.onload = () => {
     }
 
 
-    /**
-     * HSLA
-     */
     function HSLA(h, s, l, a) {
         this.h = h || 0;
         this.s = s || 0;
@@ -271,10 +265,7 @@ window.onload = () => {
     HSLA.prototype.toString = function () {
         return 'hsla(' + this.h + ',' + (this.s * 100) + '%,' + (this.l * 100) + '%,' + this.a + ')';
     }
-
-    /**
-     * Particle
-     */
+    
     function Particle(x, y, color) {
         this.x = x || 0;
         this.y = y || 0;
@@ -300,21 +291,20 @@ window.onload = () => {
     contactCanvas.setAttribute("width", ww);
     contactCanvas.setAttribute("height", wh);
 
-    // pure javascrip random function ============
-    function random(min, max) {
+    const random = (min, max) => {
         return Math.random() * (max - min) + min;
     }
 
-    window.requestAnimFrame = (function () {
+    window.requestAnimFrame = (() => {
         return window.requestAnimationFrame ||
             function (callback, element) {
                 window.setTimeout(callback, 1000 / 60);
             };
     })();
 
-    function init2() { } //end init
+    const init2 = () => { } //end init
 
-    function animate() {
+    const animate = () => {
         requestAnimFrame(animate);
 
         const color1 = "rgba(60,32,230,0.03)";
@@ -342,16 +332,13 @@ window.onload = () => {
     const draw = (color1, color2, canvas, ctx) => {
         //setup canvas enviroment
         let time = new Date().getTime() * 0.002;
-        //console.log(time);
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.save();
 
-        // random float to be used in the sin & cos
         let randomX = random(.2, .9);
         let randomY = random(.1, .2);
 
-        // sin & cos for the movement of the triangles in the canvas
         let rectX = Math.cos(time * 1) * 1.5 + randomX;
         let rectY = Math.sin(time * 1) * 1.5 + randomY;
         let rectX2 = Math.cos(time * .7) * 3 + randomX;
@@ -359,10 +346,8 @@ window.onload = () => {
         let rectX3 = Math.cos(time * 1.4) * 4 + randomX;
         let rectY3 = Math.sin(time * 1.4) * 4 + randomY;
 
-        //console.log(rectX + '-' + rectY + '-' + rectX2 + '-' + rectY2 + '-' + rectX3 + '-' + rectY3);
-
-        //triangle gradiente ==========================================
-        var triangle_gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+        //triangle gradient ==========================================
+        let triangle_gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
         triangle_gradient.addColorStop(0, color1);
         triangle_gradient.addColorStop(1, color2);
 
@@ -488,7 +473,6 @@ window.onload = () => {
     const drawFooter = (color1, color2, canvas, ctx) => {
         //setup canvas enviroment
         let time = new Date().getTime() * 0.002;
-        //console.log(time);
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.save();
@@ -517,8 +501,6 @@ window.onload = () => {
         let rectX9 = Math.cos(time * 4.0) * 4 + randomX;
         let rectY9 = Math.sin(time * 4.2) * 4 + randomY;
 
-
-        //console.log(rectX + '-' + rectY + '-' + rectX2 + '-' + rectY2 + '-' + rectX3 + '-' + rectY3);
 
         //triangle gradiente ==========================================
         var triangle_gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
@@ -612,33 +594,29 @@ window.onload = () => {
         ctx.fill();
 
         ctx.restore();
-
-
-
     }
+
 
     //call init
     init2();
     animate();
 
-    
-    function hex_initial_animation() {
-        $(".hex-wrap").velocity("callout.pulse").velocity({opacity: 0.5});
+    const hex_initial_animation = () => {
+        $(".hex-wrap").velocity("callout.pulse").velocity({ opacity: 0.5 });
         $(".hoverblock").velocity("fadeOut", { delay: 3000, duration: 0 });
     }
 
     hex_initial_animation();
 
-
     $(".skillName").mouseenter(function () {
-        var title_color = $(this).parent().attr("data-color");
-        var title_name = $(this).parent().attr("data-title");
-        var desc_name = $(this).parent().attr("data-content");
+        let title_color = $(this).parent().attr("data-color");
+        let title_name = $(this).parent().attr("data-title");
+        let desc_name = $(this).parent().attr("data-content");
 
-        function hex_description() {
+        const hex_description = () => {
             $('.code-description').velocity('stop', true).velocity("transition.slideRightBigIn");
             $('.' + desc_name).siblings().removeClass('desc-active');
-            setTimeout(function () {
+            setTimeout(() => {
                 $('.' + desc_name).addClass('desc-active');
                 $('.code-descriptopn > div, .desc-active').children().velocity('stop', true).velocity("transition.slideRightBigIn", { stagger: 300 });
                 $('.code-title, .desc-active span').velocity({ color: title_color }, { queue: false });
@@ -651,7 +629,7 @@ window.onload = () => {
         $('.hexactive').velocity({ scaleX: "1.1", scaleY: "1.1", opacity: 1 }, { duration: 200 });
 
 
-}).mouseleave(function () {
-    $('.hexactive').velocity('reverse').removeClass('hexactive');
-});
+    }).mouseleave(() => {
+        $('.hexactive').velocity('reverse').removeClass('hexactive');
+    });
 }
