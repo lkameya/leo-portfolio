@@ -465,6 +465,8 @@ li {
       .container #contact .text span {
         color: #551a8b;
         font-size: 1em; }
+      .container #contact .text .resume {
+        font-size: 2em; }
   .container .bounce {
     -moz-animation: bounce 1s infinite;
     -webkit-animation: bounce 1s infinite;
