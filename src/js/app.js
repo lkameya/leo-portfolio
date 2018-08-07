@@ -22,6 +22,7 @@ class TxtRotate {
 
         this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
+        
         var that = this;
         var delta = 200 - Math.random() * 100;
 
@@ -43,8 +44,6 @@ class TxtRotate {
 }
 
 window.onload = () => {
-
-
     let elements = document.getElementsByClassName('txt-rotate');
     for (let i = 0; i < elements.length; i++) {
         let toRotate = elements[i].getAttribute('data-rotate');
