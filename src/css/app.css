@@ -77,7 +77,10 @@ h1 {
 h3 {
   font-size: 0.8em;
   margin: 6em 2em 2em 2em;
-  line-height: 1.8em; }
+  line-height: 1.8em; 
+  font-weight: 300;
+}
+
 
 ul {
   text-align: center;
@@ -762,6 +765,9 @@ li {
     text-align: center; }
   .container {
     height: 100%; }
+    .container #intro {
+      background-color: rgb(247, 249, 250);
+    }
     .container #about, .container #work, .container #intro {
       position: relative;
       color: #404040;
