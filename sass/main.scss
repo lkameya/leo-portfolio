@@ -1,5 +1,10 @@
-body {
-  background-color: orangered;
-  width: 100%;
-}
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
+@import "base/base";
+@import "base/typography";
+@import "base/animations";
+@import "base/utilities";
+
+@import "pages/home";
