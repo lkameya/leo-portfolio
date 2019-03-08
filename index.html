@@ -5,36 +5,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,700" rel="stylesheet">
 
     <link rel="stylesheet" href="css/icon-font.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
-    <title>Front-end developer</title>
+    <title>Leo Kameya | Frontend developer</title>
 </head>
 
 <body>
     <header class="header">
-        <div class="logo-box">
-            <img class="logo" src="./img/logo-white.png" alt="logo-box">
+        <div class="header__logo-box">
+            <img class="header__logo" src="./img/logo-white.png" alt="logo-box">
         </div>
-        <img class="oval-blue" src="img/oval-blue.svg" alt="blue circle">
-        <img class="oval-blue-light" src="img/oval-blue-light.svg" alt="blue circle">
-        <img class="oval-pink" src="img/oval-pink.svg" alt="blue circle">
+        <img class="header__oval-blue" src="img/oval-blue.svg" alt="blue circle">
+        <img class="header__oval-blue-light" src="img/oval-blue-light.svg" alt="blue circle">
+        <img class="header__oval-pink" src="img/oval-pink.svg" alt="blue circle">
 
-        <div class="text-box">
+        <div class="header__text-box">
                 <h1 class="heading-primary">
-                        <span class="heading-primary-main">
+                        <span class="heading-primary--main">
                             Front-end developer
                         </span>
-                        <span class="heading-primary-sub">
-                            Hello, I am Leo Kameya! A software developer based in Campo Grande, Brazil.
+                        <span class="heading-primary--sub">
+                            Hi, I'm Leo Kameya! I work to bring simplicity and high performance to web and mobile applications. 
                         </span>
                 </h1>
         </div>
-        
     </header>
+    <main>
+        <section class="section-work">
+            <h2 class="heading-secondary">
+                Work
+            </h2>
+
+            <div class="project-one">
+                <div class="project-one__info">
+                    <h3 class="project-one__name">Portfolio</h3>
+                    <span class="project-one__title">
+                        Personal portfolio
+                    </span>
+                    <p class="project-one__description">
+                        Personal portfolio built with HTML5 and CSS3. The concept was designed in Sketch
+                        and the focus is to have a clean and simple design.
+                    </p>
+                    <ul class="project-one__topics">
+                        <li class="project-one__topic-1">&rArr;  Preprocessor: SASS using the 7-1 pattern structure</li>
+                        <li class="project-one__topic-2">&rArr;  Methodology: BEM - Block, Element, Modifier </li>
+                    </ul>
+                    <div class="project-one__icons">
+                        <img class="sketch-logo" src="img/sketch-logo.png" alt="sketch logo">
+                        <img class="sass-logo" src="img/sass-logo.png" alt="sketch logo">
+                    </div>
+                </div>
+                <div class="project-one__screenshots">
+                    <img class="project-one--1" src="img/project-one-1.png" alt="screenshot 1">
+                    <img class="project-one--2" src="img/project-one-2.png" alt="screenshot 2">
+
+                    <div class="github-logo">
+                        <a href="https://www.github.com/lkameya/leo-portfolio">
+                            <span>View in Github</span>
+                            <img class="github-logo" src="img/github-logo.png" alt="github logo" ></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-two">
+                    <div class="project-two__info">
+                        <h3 class="project-two__name">Spotify API</h3>
+                        <span class="project-two__title">
+                            A custom spotify player 
+                        </span>
+                        <p class="project-two__description">
+                            Keep listening to your favorite music in this original player designed for Spotify users.
+                            This application uses the Spotify API for developers.
+                        </p>
+                        <ul class="project-two__topics">
+                            <li class="project-two__topic-1">&rArr;  JS Framework: React </li>
+                            <li class="project-two__topic-2">&rArr;  Server: NodeJS with Express </li>
+                        </ul>
+                        <div class="project-two__icons">
+                            <img class="react-logo" src="img/react-logo.png" alt="sketch logo">
+                            <img class="nodejs-logo" src="img/nodejs-logo.png" alt="sketch logo">
+                        </div>
+                    </div>
+                    <div class="project-two__screenshots">
+                        <img class="project-two--1" src="img/project-two-1.png" alt="screenshot 1">
+                        <img class="project-two--2" src="img/project-two-2.png" alt="screenshot 2">
+    
+                        <div class="github-logo">
+                            <a href="https://www.github.com/lkameya/leo-portfolio">
+                                <span>View in Github</span>
+                                <img class="github-logo" src="img/github-logo.png" alt="github logo" ></a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
 </body>
 
 </html>

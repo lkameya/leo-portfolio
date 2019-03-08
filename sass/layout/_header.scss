@@ -1,0 +1,39 @@
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+                    to bottom right,rgba(107, 62, 255, 0.8), 
+                    rgba(171, 72, 232, 0.6)), 
+                url(../../img/header.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+
+  &__logo-box {
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+  }
+  
+  &__logo {
+    height: 3rem;
+  }
+  
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+  }
+
+  &__oval-blue-light {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+  }
+  
+  &__oval-pink {
+    position: absolute;
+    right: 5rem;
+  }
+  
+}
