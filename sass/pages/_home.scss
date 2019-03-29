@@ -6,6 +6,7 @@
 
 .project-one {
   display: flex;
+  justify-content: space-evenly;
 
   &__info {
     padding: 10rem;
@@ -40,7 +41,7 @@
   }
 
   &__screenshots {
-
+    padding: 10rem;
   }
 
   &__topics {
@@ -80,6 +81,7 @@
 .project-two {
   display: flex;
   flex-direction: row-reverse;
+  justify-content: space-evenly;
 
   &__info {
     padding: 10rem;
@@ -114,7 +116,7 @@
   }
 
   &__screenshots {
-
+    padding: 10rem;
   }
 
   &__topics {
@@ -162,11 +164,12 @@
 }
 
 .github-logo {
-  display: flex;
-  justify-content: flex-end;
   margin-top: 2rem;
   height: 5rem;
+  display: flex;
+  justify-content: flex-end;
 }
+
 
 .nodejs-logo {
   height: 5rem;
