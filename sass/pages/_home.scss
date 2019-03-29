@@ -8,10 +8,22 @@
   display: flex;
   justify-content: space-evenly;
 
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+
   &__info {
     padding: 10rem;
     width: 50%;
+
+    @include respond(tab-port) {
+      padding: 2rem;
+      width: 100%;
+    }
   }
+
+
+
 
   &__name {
     text-transform: uppercase;
@@ -83,10 +95,21 @@
   flex-direction: row-reverse;
   justify-content: space-evenly;
 
+  
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+
   &__info {
     padding: 10rem;
     width: 50%;
+
+    @include respond(tab-port) {
+      padding: 2rem;
+      width: 100%;
+    }
   }
+
 
   &__name {
     text-transform: uppercase;

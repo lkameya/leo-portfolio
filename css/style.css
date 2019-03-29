@@ -30,6 +30,9 @@ body {
     animation-duration: 1s;
     animation-delay: .5s;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
+    @media only screen and (max-width: 56.25em) {
+      .heading-primary--main {
+        padding: 2rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -38,6 +41,9 @@ body {
     animation-name: moveInRight;
     animation-duration: 1s;
     animation-delay: .5s; }
+    @media only screen and (max-width: 56.25em) {
+      .heading-primary--sub {
+        padding: 2rem; } }
 
 .heading-secondary {
   font-size: 4rem;
@@ -71,9 +77,16 @@ body {
 .project-one {
   display: flex;
   justify-content: space-evenly; }
+  @media only screen and (max-width: 56.25em) {
+    .project-one {
+      flex-direction: column; } }
   .project-one__info {
     padding: 10rem;
     width: 50%; }
+    @media only screen and (max-width: 56.25em) {
+      .project-one__info {
+        padding: 2rem;
+        width: 100%; } }
   .project-one__name {
     text-transform: uppercase;
     font-weight: 400;
@@ -118,9 +131,16 @@ body {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-evenly; }
+  @media only screen and (max-width: 56.25em) {
+    .project-two {
+      flex-direction: column; } }
   .project-two__info {
     padding: 10rem;
     width: 50%; }
+    @media only screen and (max-width: 56.25em) {
+      .project-two__info {
+        padding: 2rem;
+        width: 100%; } }
   .project-two__name {
     text-transform: uppercase;
     font-weight: 400;
