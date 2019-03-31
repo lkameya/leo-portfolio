@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/ -->
+<html dir="ltr" lang="en-US" class="js js canvas fontface generatedcontent wf-proximanova-n7-active wf-brandongrotesque-n7-active wf-proximanova-i4-active wf-proximanova-n4-active wf-proximanova-i7-active wf-active"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Making SVGs Responsive with CSS</title>
+				<meta name="author" content="Team Codrops">
+		<link rel="stylesheet" type="text/css" href="./Making SVGs Responsive with CSS_files/main.css">
+		<link rel="stylesheet" type="text/css" media="print" href="./Making SVGs Responsive with CSS_files/main_print.css">
+		<link rel="profile" href="http://gmpg.org/xfn/11">	
+		<script type="text/javascript" async="" src="./Making SVGs Responsive with CSS_files/ga.js"></script><script src="./Making SVGs Responsive with CSS_files/pdd7wbw.js"></script>
+		<style type="text/css">.tk-proxima-nova{font-family:"proxima-nova",sans-serif;}.tk-brandon-grotesque{font-family:"brandon-grotesque",sans-serif;}</style><style type="text/css">@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/bc719c/00000000000000000001499c/23/l?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/bc719c/00000000000000000001499c/23/d?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/bc719c/00000000000000000001499c/23/a?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/c60268/0000000000000000000148a9/23/l?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/c60268/0000000000000000000148a9/23/d?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/c60268/0000000000000000000148a9/23/a?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;}@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/42fca5/0000000000000000000148a4/23/l?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/42fca5/0000000000000000000148a4/23/d?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/42fca5/0000000000000000000148a4/23/a?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/37c6ec/0000000000000000000148a5/23/l?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/37c6ec/0000000000000000000148a5/23/d?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/37c6ec/0000000000000000000148a5/23/a?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}@font-face{font-family:brandon-grotesque;src:url(https://use.typekit.net/af/a417c9/0000000000000000000132e3/23/l?subset_id=1&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/a417c9/0000000000000000000132e3/23/d?subset_id=1&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/a417c9/0000000000000000000132e3/23/a?subset_id=1&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}</style><script>try{Typekit.load();}catch(e){}</script>
+		<link rel="shortcut icon" href="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/themes/codropstheme03/favicons/favicon.ico">
+		<link rel="apple-touch-icon" sizes="57x57" href="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/themes/codropstheme03/favicons/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/themes/codropstheme03/favicons/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/themes/codropstheme03/favicons/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/themes/codropstheme03/favicons/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/themes/codropstheme03/favicons/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/themes/codropstheme03/favicons/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/themes/codropstheme03/favicons/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/themes/codropstheme03/favicons/apple-touch-icon-152x152.png">
+		<link rel="icon" type="image/png" href="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/themes/codropstheme03/favicons/favicon-196x196.png" sizes="196x196">
+		<link rel="icon" type="image/png" href="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/themes/codropstheme03/favicons/favicon-160x160.png" sizes="160x160">
+		<link rel="icon" type="image/png" href="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/themes/codropstheme03/favicons/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/themes/codropstheme03/favicons/favicon-16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/themes/codropstheme03/favicons/favicon-32x32.png" sizes="32x32">
+		<!-- 857AADD2-739C-4BF6-A8D3-4986BE868A0C -->
+		<meta name="msapplication-TileColor" content="#2b5797">
+		<meta name="msapplication-TileImage" content="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/themes/codropstheme03/favicons/mstile-144x144.png">
+		<meta name="msapplication-config" content="/codrops/wp-content/themes/codropstheme03/favicons/browserconfig.xml">
+			   
+		
+<!-- This site is optimized with the Yoast SEO Premium plugin v9.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="An article on how to make embedded SVGs cross-browser responsive. We&#39;re going to cover embedding techniques, how to apply the &quot;Padding Hack&quot; and how to use inline media queries to make SVGs adaptive.">
+<link rel="canonical" href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/">
+<link rel="publisher" href="https://plus.google.com/101095823814290637419">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Making SVGs Responsive with CSS">
+<meta property="og:description" content="An article on how to make embedded SVGs cross-browser responsive. We&#39;re going to cover embedding techniques, how to apply the &quot;Padding Hack&quot; and how to use inline media queries to make SVGs adaptive.">
+<meta property="og:url" content="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/">
+<meta property="og:site_name" content="Codrops">
+<meta property="article:publisher" content="https://www.facebook.com/codrops/">
+<meta property="article:tag" content="iframe">
+<meta property="article:tag" content="image">
+<meta property="article:tag" content="media queries">
+<meta property="article:tag" content="object">
+<meta property="article:tag" content="responsive">
+<meta property="article:tag" content="svg">
+<meta property="article:section" content="Tutorials">
+<meta property="article:published_time" content="2014-08-19T12:08:22+00:00">
+<meta property="article:modified_time" content="2019-03-30T05:20:47+00:00">
+<meta property="og:updated_time" content="2019-03-30T05:20:47+00:00">
+<meta property="og:image" content="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2014/08/ResponsiveSVGs.jpg">
+<meta property="og:image:secure_url" content="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2014/08/ResponsiveSVGs.jpg">
+<meta property="og:image:width" content="580">
+<meta property="og:image:height" content="315">
+<meta property="og:image:alt" content="Making SVGs Responsive">
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Codrops » Making SVGs Responsive with CSS Comments Feed" href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/feed/">
+<link rel="stylesheet" id="sbc-css" href="./Making SVGs Responsive with CSS_files/sbc.css" type="text/css" media="all">
+<link rel="stylesheet" id="cookie-law-info-css" href="./Making SVGs Responsive with CSS_files/cookie-law-info-public.css" type="text/css" media="all">
+<link rel="stylesheet" id="cookie-law-info-gdpr-css" href="./Making SVGs Responsive with CSS_files/cookie-law-info-gdpr.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp_typeahead_css-css" href="./Making SVGs Responsive with CSS_files/typeahead.css" type="text/css" media="all">
+<script type="text/javascript" src="./Making SVGs Responsive with CSS_files/jquery.js"></script>
+<script type="text/javascript" src="./Making SVGs Responsive with CSS_files/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="./Making SVGs Responsive with CSS_files/sbc.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var Cli_Data = {"nn_cookie_ids":[],"cookielist":[]};
+var log_object = {"ajax_url":"https:\/\/tympanus.net\/codrops\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Making SVGs Responsive with CSS_files/cookie-law-info-public.js"></script>
+<script type="text/javascript" src="./Making SVGs Responsive with CSS_files/highlight.pack.js"></script>
+<script type="text/javascript" src="./Making SVGs Responsive with CSS_files/highlight.user.js"></script>
+<script type="text/javascript" src="./Making SVGs Responsive with CSS_files/cos.js"></script>
+<link rel="https://api.w.org/" href="https://tympanus.net/codrops/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://tympanus.net/codrops/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 4.9.10">
+<link rel="shortlink" href="https://tympanus.net/codrops/?p=19623">
+<link rel="alternate" type="application/json+oembed" href="https://tympanus.net/codrops/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftympanus.net%2Fcodrops%2F2014%2F08%2F19%2Fmaking-svgs-responsive-with-css%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://tympanus.net/codrops/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftympanus.net%2Fcodrops%2F2014%2F08%2F19%2Fmaking-svgs-responsive-with-css%2F&amp;format=xml">
+<script type="text/javascript">document.documentElement.className += " js";</script>
+		<script type="text/javascript">
+			var cli_flush_cache=1;
+		</script>
+				<script src="./Making SVGs Responsive with CSS_files/search.js"></script>
+		
+		<script type="text/javascript">
+			  var _gaq = _gaq || [];
+			  _gaq.push(['_setAccount', 'UA-7243260-2']);
+			  _gaq.push(['_trackPageview']);
+
+			  (function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			  })();
+
+			  function recordOutboundLink(link, category, action) {
+				_gat._getTrackerByName()._trackEvent(category, action);
+				setTimeout('document.location = "' + link.href + '"', 100);
+			}
+		</script>
+		<script type="text/javascript" src="./Making SVGs Responsive with CSS_files/modernizr.custom.70736.js"></script>
+		<!--[if lt IE 9 ]>
+			<script type="text/javascript" src="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/themes/codropstheme03/js/css3-mediaqueries.js"></script>
+			<link rel="stylesheet" href="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/themes/codropstheme03/css/ie.css"/>
+		<![endif]-->
+		<!--[if lt IE 8 ]>
+			<script type="text/javascript" src="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/themes/codropstheme03/js/iconfonts.js"></script>
+		<![endif]-->
+		<noscript>
+			<link rel="stylesheet" href="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/themes/codropstheme03/css/noscript.css"/>
+		</noscript>
+		<script type="application/ld+json">
+		{
+		  "@context": "http://schema.org",
+		  "@type": "WebSite",
+		  "url": "https://tympanus.net/codrops/",
+		  "potentialAction": {
+		    "@type": "SearchAction",
+		    "target": "https://tympanus.net/codrops/?s={search_term_string}",
+		    "query-input": "required name=search_term_string"
+		  }
+		}
+		</script>
+	<script type="text/javascript" async="" src="./Making SVGs Responsive with CSS_files/bsa.js"></script><script type="text/javascript" id="_bsap_js_af25dfd2f1908889af7a1aa5f4dcbd9e" src="./Making SVGs Responsive with CSS_files/s_af25dfd2f1908889af7a1aa5f4dcbd9e.js" async="async"></script><script type="text/javascript" src="./Making SVGs Responsive with CSS_files/pro.js" id="_bsap_premium_pro"></script><script type="text/javascript" src="./Making SVGs Responsive with CSS_files/country.php"></script><script type="text/javascript" src="./Making SVGs Responsive with CSS_files/country.php"></script><script type="text/javascript" id="_bsaPRO_js" src="./Making SVGs Responsive with CSS_files/saved_resource" async="async"></script></head>
+	<body id="codrops-body">
+				<!-- BuySellAds.com Ad Code -->
+		<script type="text/javascript">
+			(function(){
+				var bsa = document.createElement('script');
+				bsa.type = 'text/javascript';
+				bsa.async = true;
+				bsa.src = '//s3.buysellads.com/ac/bsa.js';
+				(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+			})();
+		</script>
+		<!-- END BuySellAds.com Ad Code -->	
+				<div class="ct-container">
+			<header class="ct-header">
+				<div class="ct-inner ct-cf">
+
+											<div class="ct-branding">
+							<a class="ct-logo" href="https://tympanus.net/codrops" rel="home">Codrops</a>
+						</div>
+					
+					<div class="ct-nav-wrapper">
+						<nav class="ct-nav-main">
+						   <ul>
+								<li><a href="https://tympanus.net/codrops/category/tutorials/">Tutorials</a></li>
+								<li><a href="https://tympanus.net/codrops/category/playground/">Playground</a></li>
+								<li><a href="https://tympanus.net/codrops/category/articles/">Articles</a></li>
+								<li><a href="https://tympanus.net/codrops/collective/">Collective</a></li>
+								<li><a href="https://tympanus.net/codrops/css_reference/">CSS Reference</a></li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="ct-header-items-right ct-cf">
+						<div class="ct-search" id="ct-search">
+							<form method="get" id="searchform" action="https://tympanus.net/codrops/">
+								<div class="ct-search-input-wrap">
+									<span class="twitter-typeahead" style="position: relative; display: inline-block;"><input class="tt-hint" type="text" autocomplete="off" spellcheck="off" disabled="" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);"><input class="ct-search-input tt-query" placeholder="Search on Codrops..." type="text" value="" name="s" id="s" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"><span style="position: absolute; left: -9999px; visibility: hidden; white-space: nowrap; font-family: proxima-nova, &quot;Proxima Nova&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 700; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></span><span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"></span></span>
+								</div>
+								<input type="hidden" name="search-type" value="posts">
+								<input class="ct-search-submit" type="submit" id="go" value=""><span class="ct-icon-search"></span>
+							</form>
+						</div>
+						<ul class="ct-connect">
+							<li><a class="ct-icon-feed" href="http://feeds2.feedburner.com/tympanus"><span>Rss Feed</span></a></li>
+							<li><a class="ct-icon-mail" href="http://eepurl.com/dJBUCo"><span>Email Updates</span></a></li>
+							<li><a class="ct-icon-twitter" href="http://www.twitter.com/codrops"><span>Codrops on Twitter</span></a></li>
+							<li><a class="ct-icon-facebook" href="http://www.facebook.com/pages/Codrops/159107397912"><span>Codrops on Facebook</span></a></li>
+							<li><a class="ct-icon-google-plus" href="https://plus.google.com/101095823814290637419" rel="publisher"><span>Codrops on Google+</span></a></li>
+						    <li><a class="ct-icon-github" href="https://github.com/codrops"><span>Codrops on Github</span></a></li>
+						</ul>
+					</div><!--/ct-header-items-right-->
+
+				</div><!-- ct-inner -->
+			</header><div class="ct-content">
+    <div class="ct-inner">		
+		
+				
+								<div class="ct-main ct-main-post" id="ct-main" role="main">
+					<div class="ct-post">
+						<article id="post-19623" class="post-19623 post type-post status-publish format-standard has-post-thumbnail hentry category-tutorials tag-iframe tag-image tag-media-queries tag-object tag-responsive tag-svg">
+							<header>
+								<div class="ct-subline entry-meta ">
+																				<img alt="" src="./Making SVGs Responsive with CSS_files/81b58502541f9445253f30497e53c280.png" srcset="https://secure.gravatar.com/avatar/81b58502541f9445253f30497e53c280?s=72&amp;d=retro&amp;r=g 2x" class="avatar avatar-36 photo" height="36" width="36">																		<div class="ct-subline__author">
+																					<span class="byline author vcard"><a href="https://tympanus.net/codrops/author/sarasoueidan/" title="Posts by Sara Soueidan" rel="author">Sara Soueidan</a></span>
+											in 
+																				<a href="https://tympanus.net/codrops/category/tutorials/">Tutorials</a>
+									</div>
+									<div class="ct-subline__time">
+										<time class="ct-subline__pubtime" pubdate="pubdate">2014/08/19</time> 
+																			</div>
+																	</div>
+								<h1 class="ct-h-shd entry-title">
+									Making SVGs Responsive with CSS																	</h1>
+							</header>		
+							<div class="ct-post-content">
+								<div class="ct-post-excerpt">An article on how to make embedded SVGs cross-browser responsive. We're going to cover embedding techniques, how to apply the "Padding Hack" and how to use inline media queries to make SVGs adaptive.</div>								<div class="ct-ad-article-wrapper">
+									<div class="ct-ad-article">
+										<div id="bsap_1277316" class="bsap bsap_1277316" data-serve="CKYDK5T">
+<style type="text/css">
+div.bsap_1277316{width:100%;display:block;}div.bsap_1277316 a{width:728px;}div.bsap_1277316 a img{padding:0;}div.bsap_1277316 a em{font-style:normal;}div.bsap_1277316 a{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}
+div.bsap_1277316 img{border:0;clear:right;}
+div.bsap_1277316 a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}
+div.bsap_1277316 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}div.bsap_1277316 a{line-height:100%;}div.bsap_1277316 a.adhere{width:728px;height:90px;line-height:720%;}html>body div.bsap_1277316 a.adhere{width:726px;height:88px;}div.bsap_1277316 img.s{height:0;width:0;}div.bsap_1277316{line-height:9px;}div.bsap_1277316 .bsap_adhere2,div.bsap_1277316 iframe{float:left;}div.bsap_1277316 .bsap_adhere2 a{height:90px;width:20px;background:url(http:\/\/s3.buysellads.com\/ac\/ah20x90_1.gif) no-repeat 0 0;text-indent:-9999px;}
+</style>
+<iframe width="728" height="90" id="ad_1277316_backfill2_frame" src="./Making SVGs Responsive with CSS_files/raw_97efbf7e60dcad5baf91751bb601ff01.html" frameborder="0" class="bsap_adframe" scrolling="no"></iframe>
+
+<script type="text/javascript" id="auto_1" class="ignoreme"> if (typeof(_bsap_serving_callback) !== 'undefined') _bsap_serving_callback(64024, 'CKYDK5T', ''); </script>
+<script type="text/javascript" id="auto_2" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(); </script></div>
+									</div>
+								</div>
+
+																	<div class="ct-post-featured-img">
+								    	<img width="580" height="315" src="./Making SVGs Responsive with CSS_files/ResponsiveSVGs.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Making SVGs Responsive" srcset="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2014/08/ResponsiveSVGs.jpg 580w, https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2014/08/ResponsiveSVGs-300x162.jpg 300w" sizes="(max-width: 580px) 100vw, 580px">								    </div>
+								
+																
+								<p class="ct-msponsor-article"><span>From our monthly sponsor:</span> <a href="https://synd.co/2VEp1Cg">HelloSign API: Everything IT wants and developers love. Try it free today.</a></p>
+								
+								<p>An SVG can be embedded on a web page in many ways; one of which is embedding it inline in an HTML5 page using the <code>&lt;svg&gt;</code> tag. The other commonly used techniques include embedding it as an image using the <code>&lt;img&gt;</code> tag, embedding it using the <code>&lt;object&gt;</code> tag, using an <code>iframe</code>, and as a CSS background image.</p>
+<p>Conceptually, making an SVG scale as its container scales should be as simple as removing any fixed height and/or width, and specifying a <code>viewBox</code> attribute value. However, due to different browser implementations and inconsistencies, the web isn’t all ponies and rainbows, and making SVGs fluid isn’t quite that straightforward, because the way browsers determine the dimensions of an SVG when embedded in different ways isn’t consistent across all of them.</p>
+<p>That said, there are certain “fixes” and hacks that we can use to get the expected behavior in all browsers.<strong> In this article, we’re going to explore these techniques, going over when to use each one, in order to make SVGs fluid and/or adaptive.</strong></p>
+<h3>Making SVGs Fluid Using CSS</h3>
+<p>In order to make an SVG fluid, the first logical thing to do is to remove the <code>height</code> and <code>width</code> attributes. When a fixed height and/or width is specified, the SVG is going to maintain that height/or width, thus restricting it from being fully responsive. You should, however, leave the <code>viewBox</code> attribute present. After removing the height and width, you can embed the SVG in one of several ways on the page.</p>
+<p>We’ll be using the following SVG nautical logo in the demos. It’s from a freebie designed by <a href="http://www.freepik.com/free-vector/retro-nautical-cruise-badges_715941.htm">Freepik</a>.</p>
+<p><a href="./Making SVGs Responsive with CSS_files/logo.png"><img src="./Making SVGs Responsive with CSS_files/logo.png" alt="logo" width="194" height="186" class="alignnone size-full wp-image-19666"></a></p>
+<h4>SVG embedded using <code>&lt;img&gt;</code></h4>
+<p>When an SVG is embedded as an image in an <code>&lt;img&gt;</code> tag, <strong>the height and width specified on the <code>&lt;img&gt;</code> tag are used by the browser as a viewport to render the SVG into</strong>. The contents of the SVG are then positioned inside the viewport depending on the value of the <code>viewBox</code> specified on the <code>&lt;svg&gt;</code>.</p>
+<pre class="brush:html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"my_SVG_file.svg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image description."</span> /&gt;</span>
+</pre>
+<p>Normally, browsers are smart enough to determine the width and height of the SVG even if you don’t specify a width and height for the <code>&lt;img&gt;</code> element. For example, if you were to wrap the <code>img</code> in a <code>div</code>, without specifying the height and width of the <code>img</code>, Chrome and Firefox will both assume the <code>img</code> has <code>width: 100%</code>; the SVG is then stretched to fill the containing <code>div</code>, and its height is adjusted accordingly so that it preserves its aspect ratio. As the containing <code>div</code> is then resized, the <code>img</code> SVG responds in an expected way. This behavior is different from an <code>img</code> referencing a raster graphic such as a PNG image, for example; in the latter case, you’d have to explicitly set the width of the <code>img</code> to 100% using CSS to make it fluid.</p>
+<p>In Internet Explorer, things are different. If you don’t specify a width for the <code>img</code>, it will assume the height is equal to 150px, which is the default height for replaced elements <a href="http://www.w3.org/TR/CSS2/visudet.html#inline-replaced-width">as specified in CSS</a>—the default width is 300px. The SVG is then positioned inside the containing <code>div</code> such that its height is equal to 150px; the width is assumed to be 100%, though, making the SVG always 150px in height no matter how wide the container gets, resulting in extra white spaces on both sides. In order to work around this issue in IE, it is enough to explicitly set the width on the <code>img</code> to 100%. <em>These results were obtained from tests made in Internet Explorer 9 and 11.</em></p>
+<p>So, making an SVG embedded as an <code>img</code> fluid is doable by removing the explicit height and width set on the <code>&lt;svg&gt;</code>, and then adding one line of CSS for Internet Explorer:</p>
+<pre class="brush:css hljs"><span class="hljs-comment">/* fix for IE */</span>
+<span class="hljs-selector-tag">img</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+}
+</pre>
+<p><strong>Check the <a href="http://tympanus.net/Tutorials/ResponsiveSVGs/index.html">demo</a> out in different browsers to see how the SVG behaves.</strong></p>
+<p>Note that if you choose to set a width and height on the <code>&lt;img&gt;</code> tag other than 100%, the SVG viewBox is going to fit inside the viewport created by these dimensions just like it would if the width and height were set on the <code>&lt;svg&gt;</code> element. This is due to the fact that the dimensions of the <code>img</code> establish the viewport for the SVG it references.</p>
+<h4>SVG embedded using <code>&lt;object&gt;</code></h4>
+<p>An SVG embedded using an <code>&lt;object&gt;</code> tag behaves in a similar way to that embedded using <code>&lt;img&gt;</code> when it comes to making the SVG fluid.</p>
+<pre class="brush:html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">object</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"image/svg+xml"</span> <span class="hljs-attr">data</span>=<span class="hljs-string">"my_SVG_file.svg"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- fallback here (&lt;img&gt; referencing a PNG version of the graphic, for example) --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">object</span>&gt;</span>
+</pre>
+<p>Just like with the <code>img</code> tag, Firefox and Chrome both assume the width of the SVG object to be 100%, and the height changes proportionally as the width increases or decreases, and hence the SVG scales as expected. The width and height set on the <code>object</code> will be the viewport inside which the SVG graphic is rendered.</p>
+<p>In Internet Explorer, the same issue as the one we mentioned earlier occurs, where the SVG’s height is set to the default 150px. The issue is also fixed by setting the width of the <code>object</code> explicitly to 100%:</p>
+<pre class="brush:css hljs"><span class="hljs-comment">/* fix for IE */</span>
+<span class="hljs-selector-tag">object</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+}
+</pre>
+<p><strong>Here is a <a href="http://tympanus.net/Tutorials/ResponsiveSVGs/index2.html">demo</a> that you can check out. </strong></p>
+<h4>SVG embedded using <code>&lt;iframe&gt;</code></h4>
+<p>An <code>&lt;iframe&gt;</code> is very similar in function and features to an <code>&lt;object&gt;</code> in SVG.</p>
+<pre class="brush:html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"my_SVG_file.svg"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- fallback here (&lt;img&gt; referencing a PNG version of the graphic, for example) --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+</pre>
+<p>However, the way browsers seem to handle it is different. Chrome, Firefox, and Internet Explorer currently handle an <code>iframe</code> referencing an SVG (that doesn’t have a width and height) by defaulting to the default size for replaced elements that we mentioned before: 300px width and 150px height. In the previous cases, when IE used the default height of 150px, it assumed the width to be 100%. However, with the <code>iframe</code>, all three browsers set both the height and the width of the iframe to a fixed 300px by 150px size.</p>
+<p>Applying <code>width:100%</code> stretches the iframe to fill the width of the container, but it does not change the height—it is still fixed at 150px; even when the container and the iframe shrink to a width less than the original width of the SVG, the iframe still maintains a 150px height, <strong>resulting in white space appearing at the top and bottom of the SVG</strong>. This happens in all three browsers.</p>
+<p>The only way to change the height of the SVG is by explicitly setting it on the <code>iframe</code>. Of course, the height then, along with the width, form the viewport inside which the SVG is positioned. And if you want the SVG to fit inside the viewport without any white space above it, under it, or to its sides, you need to make sure you set the height and width of the viewport (the <code>iframe</code>) such that the aspect ratio of the height to the width is the same as the aspect ratio of the height to the width of the SVG. The aspect ratio of the SVG canvas is the aspect ratio of the height and width of the <code>viewBox</code>. (<em> For a detailed explanation of how the SVG viewport and <code>viewBox</code> work, check the <a href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/#section-resources">Resources section</a> for a link to a thorough guide.</em>)</p>
+<p>There is no “standard”, non-hacky way in CSS to create an element with a specific height-to-width ratio. However, a few years back, Thierry Koblentz posted <a href="http://alistapart.com/article/creating-intrinsic-ratios-for-video/">an article on A List Apart</a> explaining a technique—known today as <em>The Padding Hack</em>—that makes it possible to create intrinsic ratios for videos and iframes. </p>
+<p>The idea behind the padding hack is to make use of the relation of an element’s padding to its width. When the padding is set in percentages, <strong>the percentage is calculated relative to the width of the element</strong>, even if you’re setting the padding on the top of bottom of the element. That same technique can be used in the case of SVG to make the SVG fluid. The following are the steps for making the <code>iframe</code> referencing the SVG fluid. We’ll explain each step as we get to it.</p>
+<p>The SVG in the demos looks like this:</p>
+<pre class="brush:html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">version</span>=<span class="hljs-string">"1.1"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"194"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"186"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 194 186"</span>&gt;</span>
+    
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+</pre>
+<h5>The Padding Hack – Step 1</h5>
+<p>The first step in making the SVG responsive when it is embedded in an <code>iframe</code> is the same step we did before: remove the <code>height</code> and <code>width</code> attribute from the root <code>&lt;svg&gt;</code> element.</p>
+<pre class="brush:html hljs xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">version</span>=<span class="hljs-string">"1.1"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 194 186"</span>&gt;</span>
+    
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+</pre>
+<h5>The Padding Hack – Step 2</h5>
+<p>Next, make sure you set the <code>viewBox</code> on the <code>&lt;svg&gt;</code>. In most cases, the SVG will have a <code>viewBox</code> specified, so you want to keep that.</p>
+<p><em>You don’t need to explicitly set the <code>preserveAspectRatio</code> because its default value (<code>xMidYMid meet</code>) is the value we would want to set anyway. So, unless the value of <code>preserveAspectRatio</code> is set to something else, you don’t really have to set it.</em></p>
+<pre class="brush:html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">version</span>=<span class="hljs-string">"1.1"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 194 186"</span> <span class="hljs-attr">preserveAspectRatio</span>=<span class="hljs-string">"xMidYMid meet"</span>&gt;</span>
+    
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+</pre>
+<h5>The Padding Hack – Step 3</h5>
+<p>In order for the padding hack to work, the SVG needs to be wrapped in a container. Since the containing element is just that—a container—we’re going to use a generic <code>div</code>. This container is going to get the intrinsic ratio using the padding hack (next step), and then the <code>iframe</code> referencing the SVG will be scaled to fit inside the container.</p>
+<pre class="brush:html hljs xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"my_SVG_file.svg"</span>&gt;</span>
+        
+    <span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</pre>
+<h5>The Padding Hack – Step 4</h5>
+<p>Next, we apply some styles to the container following these rules:</p>
+<pre class="brush:css hljs"><span class="hljs-selector-class">.container</span> {
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;             <span class="hljs-comment">/* collapse the container's height */</span>
+    <span class="hljs-attribute">width</span>: width-value;    <span class="hljs-comment">/* specify any width you want (a percentage value, basically) */</span>
+    <span class="hljs-comment">/* apply a padding using the following formula */</span>
+    <span class="hljs-comment">/* this formula makes sure the aspect ratio of the container equals that of the svg graphic */</span>
+    <span class="hljs-attribute">padding-top</span>: (svg height / svg width) * width-value;
+    <span class="hljs-attribute">position</span>: relative;    <span class="hljs-comment">/* create positioning context for svg */</span>
+}
+</pre>
+<p>So, what exactly do the above rules do?</p>
+<p>First, we collapse the container’s height. Since the padding is calculated relative to the width of the element, we’re going to <em>only apply the padding</em> to the element to expand it vertically again. Any additional height will throw off the aspect ratio we need.</p>
+<p>After you specify the width of the container—which you’ll usually set to be fluid in the page using a percentage value—a padding is applied to the top (or bottom) of the container, following the above formula. This formula uses the values of the <code>height</code> and <code>width</code> attributes of the <code>&lt;svg&gt;</code> (the ones we removed in Step 1) to specify a padding value that allows the intrinsic ratio of the container to match that of the <code>svg</code>. </p>
+<p>In our logo example, the width of the <code>svg</code> is 194px and the height is 186px. I’ve set the container’s width to 50%, so that it takes up half the available horizontal space. The padding applied to the container is equal to <code>(186 / 194) * 50 = 48%</code>. So, the code for the container looks like the following:</p>
+<pre class="brush:css hljs"><span class="hljs-selector-class">.container</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">50%</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">48%</span>;
+    <span class="hljs-attribute">position</span>: relative;
+}
+</pre>
+<p>Because the container’s height has been collapsed, and a fairly large amount of padding is applied to the top of it, its content—the SVG <code>iframe</code>—is pushed down so that it no longer “sits” inside the container anymore.</p>
+<p>In order to “pull” the SVG back up, we’re going to position the <code>iframe</code> absolutely inside the container. This is where the <code>position: relative;</code> comes into play—it is used to create a positioning context for the SVG.</p>
+<h5>The Padding Hack – Step 5</h5>
+<p>Now that we have a positioning context, we’re going to position the <code>iframe</code> absolutely inside the container, and scale it so that it has the container’s height and width:</p>
+<pre class="brush:css hljs"><span class="hljs-selector-tag">iframe</span> {
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+}
+</pre>
+<p>That’s all you need for the SVG to be fluid. The <code>iframe</code> comes with a default border; you’ll probably want to get rid of that by adding <code>border: none;</code> to the above rule set.</p>
+<p><strong>Check the <a href="http://tympanus.net/Tutorials/ResponsiveSVGs/index3.html">demo</a> out. The demo shows the <code>iframe</code> with and without the padding hack inside its container. Resize the screen to see how the SVG responds in both cases.</strong></p>
+<div class="ct-ad-article-wrapper ct-ad-article-wrapper-in"><div class="ct-ad-article" style="display:none;"><img class="ct-ad-img" style="display: none;" src="./Making SVGs Responsive with CSS_files/advertisement.jpg"><div id="bsap_1279993" class="bsap bsap_1279993" data-serve="CKYDK5V"><a href="https://srv.buysellads.com/ads/click/x/GTND42QMCEYDTKJJCTALYKQMCW7IL5QMCYBD4Z3JCWBIC5Q7C6BDT53KC6BIP23ECTBDEK3EHJNCLSIZ" class="ad0 odd " title="The Ultimate WordPress Theme" id="bsa_4573598" target="_blank" rel="nofollow">
+<img src="./Making SVGs Responsive with CSS_files/223422-1400703282.jpg" width="728" height="90" alt=""></a>
+<script type="text/javascript" id="auto_3" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(); </script></div><div style="clear:both;"></div></div></div>
+<h4>SVG embedded inline using the <code>&lt;svg&gt;</code> tag</h4>
+<p>An SVG can be embedded inline in an HTML document using the <code>&lt;svg&gt;</code> tag.</p>
+<pre class="brush:html hljs xml"><span class="hljs-comment">&lt;!-- <span class="hljs-doctag">Note:</span> the xmlns is not required in an HTML5 document --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">version</span>=<span class="hljs-string">"1.1"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 194 186"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- SVG content --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+</pre>
+<p>An inline <code>svg</code>‘s viewport is established by the height and width specified on the root <code>&lt;svg&gt;</code> element. Once the width and height attributes are removed, all browsers assume a width equal to 100% and stretch the SVG horizontally to fit the width of its container.</p>
+<p>In Chrome and Firefox, the height of the SVG is calculated by the browser so that the SVG scales as expected. No extra work is needed to make the SVG fluid.<sup><a href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/#note-1">[1]</a></sup></p>
+<p>In Internet Explorer (tested in version 9 and 11), the height is assumed to be 150px again, with the width of 100%. Just like in the case of the <code>img</code> embed, this height is fixed so that when the SVG shrinks on smaller screens, the SVG will contain white space above and below the content inside it. In the case of the <code>img</code> embed, explicitly specifying <code>width: 100%</code> was enough to fix this; however, setting the width to 100% on the inline <code>svg</code> does not fix it. So we’re left in a situation similar to that of the <code>iframe</code> embed. The only way to make the inline SVG fluid in this case is by using the padding hack as we did in the iframe case. The HTML and CSS would look like the following:</p>
+<pre class="brush:html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">version</span>=<span class="hljs-string">"1.1"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 194 186"</span>&gt;</span>
+        
+    <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</pre>
+<pre class="brush:css hljs"><span class="hljs-selector-class">.container</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">50%</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">48%</span>;
+    <span class="hljs-attribute">position</span>: relative;
+}
+
+<span class="hljs-selector-tag">svg</span> {
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+}
+</pre>
+<p>Note that, unlike the <code>iframe</code>, the <code>svg</code> does not need a height and width set to fit inside the container. It wouldn’t hurt if you added them, but they’re not necessary in this case.</p>
+<p><strong>You can check out the <a href="http://tympanus.net/Tutorials/ResponsiveSVGs/index4.html">demo</a>.</strong></p>
+<p id="note-1">[1] <em><strong>Note:</strong> At the time of writing of this article, the latest version of Chrome on Windows (Version 36.0.1985.143 m) also needs the padding hack to work. The SVG does scale well in general, but it seems to not go any smaller than its original dimensions. So, when the container is shrunk so that its width becomes less than the initial width of the SVG, the SVG sticks out (overflows). The padding hack fixes it. A test in Chrome Canary showed that this issue was non-existent; so hopefully the hack won’t be needed in the next stable update.</em></p>
+<h4>SVG embedded as a background image using CSS</h4>
+<p>One of the popular ways to embed an SVG is using a background image on an element. The following snippet shows an element with an SVG background image:</p>
+<pre class="brush:css hljs"><span class="hljs-selector-class">.element</span> {
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(my_SVG_image.svg);
+    <span class="hljs-comment">/* other styles */</span>
+}
+</pre>
+<p>Luckily, we don’t have to apply any fixes or hacks to make an SVG background image behave as expected—an SVG background image can be positioned, tiled, sized, and scaled as any bitmap background image can.</p>
+<p><strong>Check out the <a href="http://tympanus.net/Tutorials/ResponsiveSVGs/index5.html">live demo</a> showing a simple example of the above logo being used as a background image of a fluid element.</strong></p>
+<p>In the demo, I’ve used the padding hack so that the element has an intrinsic ratio similar to that of the SVG. You may or may not want/need to do this. I did this for demonstration purposes only so that the SVG fits exactly into the background at all times. I just collapsed the height of the element, and then applied the padding to get the aspect ratio I wanted. Without doing this, and because the element is empty in the demo, it would have collapsed anyway and the background image wouldn’t have been visible.</p>
+<h3>Making SVGs adaptive Using CSS Media Queries</h3>
+<p>The fact that the graphical elements inside an SVG are created using XML makes working with SVGs very liberating. Because SVG content is made up of XML tags that render graphics, we can select individual elements and apply specific styles to them, just like we can select HTML elements, using CSS selectors.</p>
+<p>Just like you can change the styles of an HTML element—like background color, borders, etc.—you can change certain styles of an SVG element using CSS. SVG elements are usually styled using presentation attributes like <code>fill</code>, <code>stroke</code>, <code>transform</code>, and many others. However, only a subset of all presentation attributes can be set using CSS. <strong>You can find <a href="http://www.w3.org/TR/SVG/styling.html#SVGStylingProperties">a list of SVG styling properties that can be set using CSS</a> available in the SVG <a href="http://www.w3.org/TR/SVG/styling.html">Styling specification</a>.</strong> <em>The list of attributes that can be set using CSS properties currently does not include the <code>x</code>, <code>y</code>, <code>width</code>, and <code>height</code> attributes; but these four will be added to the list and we will be able to set them using CSS in SVG2.</em></p>
+<p>Some of the most commonly set styles using CSS include <code>fill</code>, which works similar to a background color on many elements; <code>stroke</code>, which is similar to <code>border</code>; <code>opacity</code>, <code>display</code>, <code>transform</code>, and a few others.</p>
+<p>For the logo we have in our demos, we’re going to use the <code>img</code> tag to reference it. After applying the fix mentioned earlier to make the SVG fluid, we’re going to hide some elements on smaller screens, and change the fill color of others, thus slightly changing how it looks on different screen sizes that we’ll specify in the CSS media queries.</p>
+<p>We’re going to add the media queries inside a <code>&lt;style&gt;</code> tag inside the root <code>&lt;svg&gt;</code>. The following is how the SVG file we’re going to be referencing looks like:</p>
+<pre class="brush:html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">version</span>=<span class="hljs-string">"1.1"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 194 186"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+        <span class="hljs-comment">/* CSS styles and media queries here */</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+    
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+</pre>
+<p>And we’re going to reference the logo using an <code>&lt;img&gt;</code> tag like so:</p>
+<pre class="brush:html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"logo.svg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Logo"</span> /&gt;</span>
+</pre>
+<p>At this point, it’s time to point out that the sizes specified in the media queries refer to the size of the SVG <em>viewport</em>, except for when the SVG is embedded inline in the document using an <code>&lt;svg&gt;</code> tag. The SVG viewport is defined by the dimensions of the element referencing the SVG. For example, in the case when the SVG is referenced in an <code>img</code> tag, the width and height of the <code>img</code> specify the viewport. In other words, the conditions specified in the media queries apply to the <code>img</code> tag, so that <code>(width: 30em)</code> would apply styles to the SVG when the <code>img</code> is 30em wide.</p>
+<p>That said, here is the markup for the SVG. Each of the elements inside it has an ID that we’re going to use in the CSS to select and style it:</p>
+<pre class="brush:html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">version</span>=<span class="hljs-string">"1.1"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 194 186"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"curved_bg"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"#195463"</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"..."</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">g</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"primary_content"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"#ECECEC"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"icon"</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"..."</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inner-circle"</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"..."</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"middle-circle"</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"..."</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">g</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">g</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"secondary_content"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"#ECECEC"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"bottom-text"</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"..."</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"upper-text"</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"..."</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"outer-circle"</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"..."</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">circle</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"left-dot"</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">"31.1"</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">"91.5"</span> <span class="hljs-attr">r</span>=<span class="hljs-string">"3"</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">circle</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"right-dot"</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">"163.4"</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">"91.5"</span> <span class="hljs-attr">r</span>=<span class="hljs-string">"3"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">g</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+</pre>
+<p>Using a <code>&lt;style&gt;</code> tag inside the SVG, we’re going to specify the media queries that will change the SVG’s styles depending on the size of the viewport. The SVG will change as shown in the following image:</p>
+<p><a href="./Making SVGs Responsive with CSS_files/responsive-logo-variations.png"><img src="./Making SVGs Responsive with CSS_files/responsive-logo-variations.png" alt="responsive-logo-variations" width="814" height="320" class="alignnone size-full wp-image-19722" srcset="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2014/08/responsive-logo-variations.png 814w, https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2014/08/responsive-logo-variations-300x117.png 300w" sizes="(max-width: 814px) 100vw, 814px"></a></p>
+<p>We’re only going to be using the CSS <code>fill</code> and <code>opacity</code> properties. As the viewport size decreases, the curvy background is first removed by setting its opacity to zero, and the fill color of the remaining content of the SVG is changed from white to dark navy. As the screen gets smaller, the text part of the logo is removed so that it takes up less screen estate. And finally, the circle surrounding the icon is removed and only the anchor icon remains on very small screens.</p>
+<p>Adding the media queries, our SVG file looks like this:</p>
+<pre class="brush:html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">version</span>=<span class="hljs-string">"1.1"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 194 186"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+        <span class="hljs-selector-tag">svg</span> * {
+            <span class="hljs-attribute">transition</span>: fill .<span class="hljs-number">1s</span> ease-out, opacity .<span class="hljs-number">1s</span> ease-out;
+        }
+        @<span class="hljs-keyword">media</span> all and (max-width: <span class="hljs-number">250px</span>) {
+            <span class="hljs-selector-id">#curved_bg</span> { 
+                <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>; 
+            }
+            <span class="hljs-selector-id">#secondary_content</span>, <span class="hljs-selector-id">#primary_content</span> { 
+                <span class="hljs-attribute">fill</span>: <span class="hljs-number">#195463</span>; 
+            }
+        }
+        @<span class="hljs-keyword">media</span> all and (max-width: <span class="hljs-number">200px</span>) {
+            <span class="hljs-selector-id">#secondary_content</span> {
+                <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+            }
+        }
+        @<span class="hljs-keyword">media</span> all and (max-width: <span class="hljs-number">150px</span>) {
+            <span class="hljs-selector-id">#inner-circle</span>, <span class="hljs-selector-id">#middle-circle</span> {
+                <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+            }
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"curved_bg"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"#195463"</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"..."</span>/&gt;</span>
+    
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+</pre>
+<p>First, I added a transition to the elements inside the SVG so that they fade in and out and change color smoothly over the course of 0.1 seconds. Then, for each media query, part of the SVG is hidden.</p>
+<p><strong>Check the <a href="http://tympanus.net/Tutorials/ResponsiveSVGs/index6.html">demo</a> out and make sure to resize the screen to see the logo adapt.</strong></p>
+<p><em>Note that at the time of writing of this article, there is a bug in Chrome where the styles specified in a media query rule set are only applied if the query condition is specified in pixels. Queries specified in <code>em</code> don’t currently work. So, in order to make the demo work in Chrome, the media queries are set in pixels instead of <code>em</code>. You can check the state of this bug in <a href="https://code.google.com/p/chromium/issues/detail?id=404470">this bug report</a>.</em></p>
+<p>Changing logos like this is one of several ways to make them responsive. Some company logos may take more screen estate on small screens than necessary, so we see a lot of logos adapt to this by getting rid of the textual part of the logo and leaving only the icon. Without SVG, this would be achieved by switching PNGs on different screen sizes. Not only can the bitmap logo look bad on high-resolution screens, but having to maintain two or more images just to hide parts of the logo isn’t very efficient. This is why SVGs would be a great choice for logos—they look good everywhere, and you can select specific parts using CSS and hide them as needed without having to maintain multiple files.</p>
+<h3>Wrapping Up</h3>
+<p>SVG implementations in evergreen browsers such as Chrome and Firefox are getting better by the day; so keep in mind that some of the information in this article <em>may</em> change any time in the future.</p>
+<p>Issues occurring in Internet Explorer, however, will persist due to the fact that certain versions will still be around for quite some time, so the fixes mentioned above will still hold and be useful during that time.</p>
+<p>SVGs are pretty great when it comes to creating responsive resolution-independent logos (and other graphics, for the matter). Of course, using media queries to adapt the SVG to different media conditions goes beyond customizing logos. You can animate shapes into other shapes (you might need JavaScript to help with this in some cases), customize colors, change fonts, show and hide items, and much more. Feel free to explore the possibilities and different use cases.</p>
+<p><strong>I hope you found this article useful. Thank you for reading!</strong></p>
+<p><em>You can download all examples shown in this tutorial here: <a href="http://tympanus.net/Tutorials/ResponsiveSVGs/ResponsiveSVGs.zip">Responsive SVGs demos</a></em></p>
+<h3 id="section-resources">Resources and Further Reading</h3>
+<ul>
+<li>More about the SVG viewport and how content is rendered inside it: <a href="http://sarasoueidan.com/svg-coordinate-systems" title="Understanding SVG Coordinate Systems and Transformations (Part 1)">Understanding SVG Coordinate Systems &amp; Transformations (Part 1) – The viewport, <code>viewBox</code>, and <code>preserveAspectratio</code></a> – by me.</li>
+<li><a href="http://dev.opera.com/blog/how-media-queries-allow-you-to-optimize-svg-icons-for-several-sizes/">How Media Queries Allow You to Optimize SVG Icons for Several Sizes</a> – An article (and screencast) by Opera’s Andreas Bovens on the Dev.Opera blog. </li>
+</ul>
+<p><em>Do you know of any other weird browser inconsistencies regarding responsive SVGs? What about tips and use cases for adaptive SVGs? Don’t hesitate to share them in the comments section below! </em></p>
+
+																
+																
+																	<div class="ct-post-nav">
+										<div class="ct-post-prev">        
+											<strong>Previous:</strong><br> <a href="https://tympanus.net/codrops/2014/08/05/page-preloading-effect/" rel="prev">Page Preloading Effect</a>  
+										</div>
+										<div class="ct-post-next">
+											<strong>Next:</strong><br> <a href="https://tympanus.net/codrops/2014/09/02/tab-styles-inspiration/" rel="next">Tab Styles Inspiration</a>  
+										</div>
+										<div class="clr"></div>
+									</div> <!-- ct-post-nav -->
+																
+							</div>
+						</article>
+						<p class="ct-tags">
+							Tagged with: <a href="https://tympanus.net/codrops/tag/iframe/" rel="tag">iframe</a> <a href="https://tympanus.net/codrops/tag/image/" rel="tag">image</a> <a href="https://tympanus.net/codrops/tag/media-queries/" rel="tag">media queries</a> <a href="https://tympanus.net/codrops/tag/object/" rel="tag">object</a> <a href="https://tympanus.net/codrops/tag/responsive/" rel="tag">responsive</a> <a href="https://tympanus.net/codrops/tag/svg/" rel="tag">svg</a>						</p>
+						<div class="clr"></div>
+					</div>
+
+											<div class="ct-row">
+							<div class="ct-author-info ct-box">
+								<div class="ct-author-avatar">
+									<img alt="" src="./Making SVGs Responsive with CSS_files/81b58502541f9445253f30497e53c280(1).png" srcset="https://secure.gravatar.com/avatar/81b58502541f9445253f30497e53c280?s=160&amp;d=retro&amp;r=g 2x" class="avatar avatar-80 photo" height="80" width="80">								</div>
+								<div class="ct-author-page-desc">
+									<h4><a href="https://tympanus.net/codrops/author/sarasoueidan/" title="Posts by Sara Soueidan" rel="author">Sara Soueidan</a></h4>
+									<p>
+										Sara is a Lebanese freelance front-end web developer and speaker, specializing in semantic markup, CSS, SVG, and progressively enhanced, responsive design, with a strong focus on accessibility and performance.  She is the author of <a href="http://tympanus.net/codrops/css_reference">our CSS Reference</a> and has co-authored the <a href="http://www.smashingmagazine.com/2015/03/31/real-life-responsive-web-design-smashing-book-5/">Smashing Book 5</a>,  a book that covers time-saving, practical techniques for crafting fast, maintainable and scalable responsive websites. Sara also runs in-house workshops about SVG and about building accessible UI patterns. Her client list includes Netflix, The Royal Schiphol Group @ Amsterdam Airport, TELUS Digital, and more. Learn more about  some of <a href="https://sarasoueidan.com/case-studies/">her work</a> or <a href="http://sarasoueidan.com/">hire her</a>.									</p>
+									<p class="ct-author-page-url"><strong>View all contributions by <a href="https://tympanus.net/codrops/author/sarasoueidan/" title="Posts by Sara Soueidan" rel="author">Sara Soueidan</a></strong></p>
+																		
+																											<p class="ct-author-page-url">
+										<strong>Website: </strong>
+										<a href="http://sarasoueidan.com/" target="_blank">http://sarasoueidan.com/</a>
+									</p>
+																		
+									<div>
+										<ul class="ct-social-profiles">
+										
+																																		<li><a class="ct-social-twitter" href="http://twitter.com/SaraSoueidan">http://twitter.com/SaraSoueidan<span>Sara on Twitter</span></a></li>
+																																																								<li><a class="ct-social-instagram" href="https://instagram.com/sarasoueidan">https://instagram.com/sarasoueidan<span>Sara on Instagram</span></a></li>
+																																													<li><a class="ct-social-codepen" href="https://codepen.io/sarasoueidan">https://codepen.io/sarasoueidan<span>Sara on Codepen</span></a></li>
+																																		<li><a class="ct-social-github" href="http://github.com/SaraSoueidan">http://github.com/SaraSoueidan<span>Sara on Github</span></a></li>
+																																																																												</ul>
+									</div>
+								</div>
+								<div class="clr"></div>
+							</div>
+						</div>
+
+						<h2 class="ct-letterpress">Related Articles</h2>
+						<div class="ct-related-post ct-row-float cf">
+							
+									<div class="ct-box">
+										<div class="ct-latest-thumb-related">
+											<a href="https://tympanus.net/codrops/2018/06/26/triple-panel-reveal-slideshow/">
+												<img width="300" height="225" src="./Making SVGs Responsive with CSS_files/RevealSlideshow_featured-300x225.jpg" class="attachment-medium size-medium wp-post-image" alt="RevealSlideshow_featured" srcset="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2018/06/RevealSlideshow_featured-300x225.jpg 300w, https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2018/06/RevealSlideshow_featured-768x576.jpg 768w, https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2018/06/RevealSlideshow_featured.jpg 800w" sizes="(max-width: 300px) 100vw, 300px">											</a>
+										</div>
+										<h3><a href="https://tympanus.net/codrops/2018/06/26/triple-panel-reveal-slideshow/">Triple Panel Reveal Slideshow</a></h3>
+									</div>
+												
+								
+									<div class="ct-box">
+										<div class="ct-latest-thumb-related">
+											<a href="https://tympanus.net/codrops/2018/06/12/full-image-reveal-effect/">
+												<img width="300" height="225" src="./Making SVGs Responsive with CSS_files/FullImageReveal_featured-300x225.jpg" class="attachment-medium size-medium wp-post-image" alt="FullImageReveal_featured" srcset="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2018/06/FullImageReveal_featured-300x225.jpg 300w, https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2018/06/FullImageReveal_featured-768x576.jpg 768w, https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2018/06/FullImageReveal_featured.jpg 800w" sizes="(max-width: 300px) 100vw, 300px">											</a>
+										</div>
+										<h3><a href="https://tympanus.net/codrops/2018/06/12/full-image-reveal-effect/">Full Image Reveal Effect</a></h3>
+									</div>
+												
+								
+									<div class="ct-box">
+										<div class="ct-latest-thumb-related">
+											<a href="https://tympanus.net/codrops/2018/04/18/password-strength-visualization/">
+												<img width="300" height="225" src="./Making SVGs Responsive with CSS_files/PasswordStrengthVisualization-300x225.jpg" class="attachment-medium size-medium wp-post-image" alt="PasswordStrengthVisualization" srcset="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2018/04/PasswordStrengthVisualization-300x225.jpg 300w, https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2018/04/PasswordStrengthVisualization-768x576.jpg 768w, https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2018/04/PasswordStrengthVisualization.jpg 800w" sizes="(max-width: 300px) 100vw, 300px">											</a>
+										</div>
+										<h3><a href="https://tympanus.net/codrops/2018/04/18/password-strength-visualization/">Password Strength Visualization</a></h3>
+									</div>
+												
+														</div>
+
+						
+										<div class="ct-row-wrapper">
+						<div class="ct-row">
+							
+<div class="ct-sharing ct-box">
+	<!-- Begin Mailchimp Signup Form -->
+	<link href="./Making SVGs Responsive with CSS_files/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		#mc_embed_signup{background:#fff; clear:left; width:100%; text-align: left;}
+		/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+		   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+	</style>
+	<style type="text/css">
+		#mc_embed_signup form { text-align: left; }
+		#mc-embedded-subscribe-form input[type=checkbox]{display: inline; width: auto;margin-right: 10px;}
+		#mergeRow-gdpr {margin-top: 20px;}
+		#mergeRow-gdpr fieldset label {font-weight: normal;}
+		#mc-embedded-subscribe-form .mc_fieldset{border:none;min-height: 0px;padding-bottom:0px;}
+		#mc_embed_signup input.email {margin: 1rem auto; box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset;padding:8px 10px;height:auto;font-size: 14px;border-radius:4px;font-family:inherit;}
+		#mc_embed_signup input.email:focus {border-color: #66afe9; box-shadow: none;outline:none;}
+		#mc_embed_signup label {padding: 0;}    
+		#mc_embed_signup .button {background: #0099cc;color:#fff;border-radius:0;transition:none;}
+		#mc_embed_signup .button:hover {background: #02759c;}
+		#mc_embed_signup .mc-field-group.input-group label {display: inline;font-weight: normal;}
+		.mc-field-group ul {padding: 10px 0;}
+		.mc-field-group li {padding: 5px 0;}
+	</style>
+	<div id="mc_embed_signup">
+		<form action="https://tympanus.us10.list-manage.com/subscribe/post?u=10ffec652b0f54fe5d8682ac0&amp;id=a9cab6dcf0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+		    <div id="mc_embed_signup_scroll">
+			<label for="mce-EMAIL"><h4>Subscribe to our newsletter</h4></label>
+			<p>Receive our bi-weekly Collective or official newsletter right in your inbox.</p>
+			<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
+			<div class="mc-field-group input-group">
+			    <strong>Which newsletter would you like to receive? </strong>
+			    <ul>
+			    	<li><input type="checkbox" value="1" name="group[16457][1]" id="mce-group[16457]-16457-0"><label for="mce-group[16457]-16457-0">Bi-weekly Collective</label></li>
+			    	<li><input type="checkbox" value="2" name="group[16457][2]" id="mce-group[16457]-16457-1"><label for="mce-group[16457]-16457-1">Official Newsletter</label></li>
+				</ul>
+			</div>
+		    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+		    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_10ffec652b0f54fe5d8682ac0_a9cab6dcf0" tabindex="-1" value=""></div>
+		    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+		    </div>
+		</form>
+	</div>
+</div>
+							<div class="ct-bottom-ads ct-box">
+								<h4>CSS Reference</h4>
+								<p>Learn about all important CSS properties from the basics with our extensive and easy-to-read CSS Reference.</p><p>It doesn't matter if you are a beginner or intermediate, <a href="https://tympanus.net/codrops/css_reference/">start learning CSS now</a>.</p>
+							</div>
+						</div>
+					</div>
+					
+						<section id="comments" class="ct-comments">
+	
+		
+			<div class="ct-commenttitle ct-cf">
+			<h2 id="comments-title">
+				<span>Feedback</span>
+				<sup>59</sup>
+			</h2>
+						<span class="ct-closed-right">Comments are closed.</span>
+					</div>
+		
+				<nav class="ct-commentnav">
+			<a class="prev page-numbers" href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/comment-page-2/#comments">« Previous</a>
+<a class="page-numbers" href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/comment-page-1/#comments">1</a>
+<a class="page-numbers" href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/comment-page-2/#comments">2</a>
+<span aria-current="page" class="page-numbers current">3</span> 
+		</nav>
+		
+		<ol class="ct-commentlist">
+							<li class="comment even thread-even depth-1" id="li-comment-468268">
+					<article id="comment-468268" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Making SVGs Responsive with CSS_files/aa6723ef6d86c0726577cad498a1229e" srcset="https://secure.gravatar.com/avatar/aa6723ef6d86c0726577cad498a1229e?s=120&amp;d=retro&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">René Stalder</span> <a href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/comment-page-3/#comment-468268" class="ct-commenttime"><time pubdate="" datetime="2015-12-23T14:56:12+00:00">December 23, 2015 at 14:56</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">1</div>
+												<div class="ct-commentcontent">
+														<p>This still doesn’t work in Firefox. Firefox always shows the last media query, the one for the mobile.</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					<ul class="children">
+				<li class="comment odd alt depth-2" id="li-comment-468269">
+					<article id="comment-468269" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Making SVGs Responsive with CSS_files/aa6723ef6d86c0726577cad498a1229e" srcset="https://secure.gravatar.com/avatar/aa6723ef6d86c0726577cad498a1229e?s=120&amp;d=retro&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">René Stalder</span> <a href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/comment-page-3/#comment-468269" class="ct-commenttime"><time pubdate="" datetime="2015-12-23T15:04:59+00:00">December 23, 2015 at 15:04</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">2</div>
+												<div class="ct-commentcontent">
+														<p>Correction: Firefox ignores the media query definitions, handling it like there where no media query wrappers, thus the CSS rules overwrite each other.</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment even depth-2" id="li-comment-470228">
+					<article id="comment-470228" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Making SVGs Responsive with CSS_files/5cdb056c28f09c253adc2b94bfb00aaa" srcset="https://secure.gravatar.com/avatar/5cdb056c28f09c253adc2b94bfb00aaa?s=120&amp;d=retro&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">sergey</span> <a href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/comment-page-3/#comment-470228" class="ct-commenttime"><time pubdate="" datetime="2016-05-13T17:21:48+00:00">May 13, 2016 at 17:21</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">3</div>
+												<div class="ct-commentcontent">
+														<p>Well, it works for file itself. But when you use img tag. It doesn’t work</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+				<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-468270">
+					<article id="comment-468270" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Making SVGs Responsive with CSS_files/aa6723ef6d86c0726577cad498a1229e" srcset="https://secure.gravatar.com/avatar/aa6723ef6d86c0726577cad498a1229e?s=120&amp;d=retro&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">René Stalder</span> <a href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/comment-page-3/#comment-468270" class="ct-commenttime"><time pubdate="" datetime="2015-12-23T15:46:55+00:00">December 23, 2015 at 15:46</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">4</div>
+												<div class="ct-commentcontent">
+														<p>Okay, here’s the full report about the buggy behaviour of Firefox:</p>
+<p>Firefox completely ignores media query rules with min-width (except min-width: 0px).<br>
+Firefox renders media query rules with max-width (or min-width: 0) but does not handle it as media query.</p>
+<p>The best fallback is to make your media queries mobile first, then add a @media all and (max-width: 9999px), adding your desktop just to let Firefox take the desktop version in all situations. Then additionally add @media all and (min-width: 1px) which will be ignored by Firefox, to force other browser to take the mobile version first.</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					<ul class="children">
+				<li class="comment even depth-2" id="li-comment-470031">
+					<article id="comment-470031" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Making SVGs Responsive with CSS_files/73b49c20cdae2348967d18f05f80587d.png" srcset="https://secure.gravatar.com/avatar/73b49c20cdae2348967d18f05f80587d?s=120&amp;d=retro&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Vladimir Dumitraskovic</span> <a href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/comment-page-3/#comment-470031" class="ct-commenttime"><time pubdate="" datetime="2016-04-27T11:20:20+00:00">April 27, 2016 at 11:20</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">5</div>
+												<div class="ct-commentcontent">
+														<p>I was working on a project implementing something similar, following this article. I got into trouble with FF 🙂</p>
+<p>The problem seems to be `svg *` part. It looks to me that it is not parsed correctly by Firefox because of the asterisk.</p>
+<p>Hope this helps someone.</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt depth-2" id="li-comment-470032">
+					<article id="comment-470032" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Making SVGs Responsive with CSS_files/73b49c20cdae2348967d18f05f80587d.png" srcset="https://secure.gravatar.com/avatar/73b49c20cdae2348967d18f05f80587d?s=120&amp;d=retro&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Vladimir Dumitraskovic</span> <a href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/comment-page-3/#comment-470032" class="ct-commenttime"><time pubdate="" datetime="2016-04-27T11:29:00+00:00">April 27, 2016 at 11:29</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">6</div>
+												<div class="ct-commentcontent">
+														<p>Actually it is not working on Firefox with transition !? Just remove transition declaration, and it magically works on Firefox!</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+				<li class="comment even thread-even depth-1" id="li-comment-469228">
+					<article id="comment-469228" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Making SVGs Responsive with CSS_files/4bee9181856323bf9ea8418edd4f9377" srcset="https://secure.gravatar.com/avatar/4bee9181856323bf9ea8418edd4f9377?s=120&amp;d=retro&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">David</span> <a href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/comment-page-3/#comment-469228" class="ct-commenttime"><time pubdate="" datetime="2016-01-22T22:24:20+00:00">January 22, 2016 at 22:24</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">7</div>
+												<div class="ct-commentcontent">
+														<p>Great post and very helpful with the live demos.  Thanks!</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-469488">
+					<article id="comment-469488" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Making SVGs Responsive with CSS_files/84d43994d9a878e4c24c52576233cf7f" srcset="https://secure.gravatar.com/avatar/84d43994d9a878e4c24c52576233cf7f?s=120&amp;d=retro&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Anna</span> <a href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/comment-page-3/#comment-469488" class="ct-commenttime"><time pubdate="" datetime="2016-02-23T13:18:03+00:00">February 23, 2016 at 13:18</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">8</div>
+												<div class="ct-commentcontent">
+														<p>/* fix for IE */<br>
+object {width: 100%;}</p>
+<p>You saved me a complete headache!<br>
+Thankyou 🙂</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment even thread-even depth-1" id="li-comment-469572">
+					<article id="comment-469572" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Making SVGs Responsive with CSS_files/39a2139b31eb8a07d3a042f1fc4ae0e2.jpeg" srcset="https://secure.gravatar.com/avatar/39a2139b31eb8a07d3a042f1fc4ae0e2?s=120&amp;d=retro&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Osama</span> <a href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/comment-page-3/#comment-469572" class="ct-commenttime"><time pubdate="" datetime="2016-03-01T10:59:10+00:00">March 1, 2016 at 10:59</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">9</div>
+												<div class="ct-commentcontent">
+														<p>Thank you, Problem was solved on IE.</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-470928">
+					<article id="comment-470928" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Making SVGs Responsive with CSS_files/e841ea946e4cd98295643e0c68600e09.png" srcset="https://secure.gravatar.com/avatar/e841ea946e4cd98295643e0c68600e09?s=120&amp;d=retro&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Sohil</span> <a href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/comment-page-3/#comment-470928" class="ct-commenttime"><time pubdate="" datetime="2016-07-24T08:28:40+00:00">July 24, 2016 at 08:28</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">10</div>
+												<div class="ct-commentcontent">
+														<p>Hello Sara, This has been a great article that cleared many of my basics.Thanks for sharing your work and knowledge. Besides that i think there is a miss for<br>
+@media all and (max-width: 200px) {<br>
+            #secondary_content {<br>
+                opacity: 0;<br>
+            }<br>
+        }</p>
+<p>shouldn’t it be like this?</p>
+<p>@media all and (max-width: 200px) {<br>
+            #secondary_content,#middle-circle {<br>
+                opacity: 0;<br>
+            }<br>
+        }</p>
+<p>so in the second view the middle-circle is hidden.</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment even thread-even depth-1" id="li-comment-471359">
+					<article id="comment-471359" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Making SVGs Responsive with CSS_files/03fc953086161f07a721ba888392f30d" srcset="https://secure.gravatar.com/avatar/03fc953086161f07a721ba888392f30d?s=120&amp;d=retro&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">stepan raisa</span> <a href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/comment-page-3/#comment-471359" class="ct-commenttime"><time pubdate="" datetime="2016-10-05T15:54:45+00:00">October 5, 2016 at 15:54</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">11</div>
+												<div class="ct-commentcontent">
+														<p>“Long Path Tool” is very helpful for this error !<br>
+best solution for your problem.</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+		</ol>
+		<p class="ct-small-text fright">
+						<span class="ct-closed-right">Comments are closed.</span>
+					</p>
+				<nav class="ct-commentnav">
+			 <a class="prev page-numbers" href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/comment-page-2/#comments">« Previous</a>
+<a class="page-numbers" href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/comment-page-1/#comments">1</a>
+<a class="page-numbers" href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/comment-page-2/#comments">2</a>
+<span aria-current="page" class="page-numbers current">3</span> 
+		</nav>
+				
+
+
+		<div class="ct-comment-form">	
+				<div class="clr"></div>
+	</div>
+
+</section><!-- #comments -->
+				</div>
+				<aside class="ct-sidebar">		
+	<div class="ct-pat">
+		<div class="ct-pat-info">
+			<h4>Advertisement</h4>
+			<a href="https://tympanus.net/codrops/advertise/" class="ct-advertise-here">
+				<i class="ct-icon-info"></i>
+				<span>Advertise Here</span>
+			</a>
+		</div>
+		<a class="cos cos--4" href="https://synd.co/2H2hZUE" rel="nofollow" target="_blank">
+			<img class="cos__img cos__img--1" src="./Making SVGs Responsive with CSS_files/HelloSign.png" alt="HelloSign">
+			<img class="cos__img cos__img--2" src="./Making SVGs Responsive with CSS_files/HelloSign.png" alt="HelloSign">
+			<img class="cos__img cos__img--3" src="./Making SVGs Responsive with CSS_files/HelloSign.png" alt="HelloSign">
+			<img class="cos__img cos__img--4" src="./Making SVGs Responsive with CSS_files/HelloSign.png" alt="HelloSign">
+			<div class="cos__text">HelloSign API: Everything IT wants and developers love. Try it free today.</div>
+		</a>
+		<!--div id="bsap_1308248" class="bsarocks bsap_af25dfd2f1908889af7a1aa5f4dcbd9e" style="display:none;"></div-->
+		<!-- New Zone -->
+		<!--div id="bsap_1306384" class="bsarocks bsap_af25dfd2f1908889af7a1aa5f4dcbd9e" style="display:none;"></div-->
+		<!-- 300x400 -->
+		<div id="bsap_1275127" class="bsap bsap_1275127" data-serve="CKYDK2Y"><iframe width="300" height="250" id="ad_1275127_backfill1_frame" src="./Making SVGs Responsive with CSS_files/raw_3afa4ba6b504a27c095e1d5f4e495c56.html" frameborder="0" class="bsap_adframe" scrolling="no"></iframe>
+
+<script type="text/javascript" id="auto_4" class="ignoreme"> if (typeof(_bsap_serving_callback) !== 'undefined') _bsap_serving_callback(28340, 'CKYDK2Y', ''); </script>
+
+<div class="bsap_adhere">
+
+<a href="http://www.buysellads.com/buy/detail/17086/zone/1275127?utm_source=site_17086&amp;utm_medium=website&amp;utm_campaign=imagetext&amp;utm_content=zone_1275127" class="">Advertise Here</a>
+
+</div>
+
+
+<script type="text/javascript" id="auto_5" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(); </script></div>
+		<!-- 125x125 -->
+		<div id="bsap_1243201" class="bsap bsap_1243201" data-serve="CKYDKKY">
+<style type="text/css">
+div.bsap_1243201{width:100%;display:block;}div.bsap_1243201 a{width:125px;}div.bsap_1243201 a img{padding:0;}div.bsap_1243201 a em{font-style:normal;}div.bsap_1243201 a{background: rgba(255, 255, 255, 0.5); padding: 10px;display:block;font-size:11px;color:#888;margin:0 10px 10px 0;text-align:center;text-decoration:none;overflow:hidden;float:left;}
+div.bsap_1243201 img{border:0;}
+div.bsap_1243201 a.adhere{color: #9DB0C1; text-transform: uppercase; font-size: 10px; text-align: center; background: rgba(255,255,255,0.5); line-height: 1200%; width: 125px; height: 125px;}
+div.bsap_1243201 a.adhere:hover{color: #7e95aa;}div.bsap_1243201 a{line-height:100%;}div.bsap_1243201 a.adhere{width:125px;height:125px;line-height:1000%;}html>body div.bsap_1243201 a.adhere{width:123px;height:123px;}div.bsap_1243201 img.s{height:0;width:0;}
+</style>
+<a href="https://srv.buysellads.com/ads/click/x/GTND42QMCEYDTKJJCT7LYKQMCWBDTKJYFTYDLZ3JCWBIVKQWC6AIEKJKC6BIP23ECTBDEK3EHJNCLSIZ" class="ad0 odd " title="WP Page Builder - Drag &amp; drop website builder for WordPress" id="bsa_7682116" target="_blank" rel="nofollow">
+<img src="./Making SVGs Responsive with CSS_files/43fc10469fab316bf28eb35a392c0d16-1533538752.jpeg" width="125" height="125" alt=""></a><a href="https://srv.buysellads.com/ads/click/x/GTND42QMCEYDTKJJCT7LYKQMCW7IL5QMCYYD6Z3JCWBIVK3NCVAILKJKC6BIP23ECTBDEK3EHJNCLSIZ" class="ad1  even" title="PSD2HTML.com: Responsive HTML5/CSS3" id="bsa_6204558" target="_blank" rel="nofollow">
+<img src="./Making SVGs Responsive with CSS_files/293176-1443799836.jpg" width="125" height="125" alt=""></a><a href="https://srv.buysellads.com/ads/click/x/GTND42QMCEYDTKJJCT7LYKQMCWBDT23MCTYIKZ3JCWBIVK37CTYD4K7KC6BIP23ECTBDEK3EHJNCLSIZ" class="ad2 odd " title="Total Drag &amp; Drop Multipurpose WordPress Theme" id="bsa_6985916" target="_blank" rel="nofollow">
+<img src="./Making SVGs Responsive with CSS_files/5308e447df8082c819f217f4502c489b-1544143949.png" width="125" height="125" alt=""></a><a href="https://srv.buysellads.com/ads/click/x/GTND42QMCEYDTKJJCT7LYKQMCWBDT53UCV7DLZ3JCWBIVKQMCWSDC2JKC6BIP23ECTBDEK3EHJNCLSIZ" class="ad3  even" title="Programming Assignment Help" id="bsa_8422431" target="_blank" rel="nofollow">
+<img src="./Making SVGs Responsive with CSS_files/f348c89b8f9b6da67da74325f43e4fe5-1537370372.png" width="125" height="125" alt=""></a><a href="https://srv.buysellads.com/ads/click/x/GTND42QMCEYDTKJJCT7LYKQMCW7IL5QMCYYDKZ3JCWBIVK3NCYBI5K7KC6BIP23ECTBDEK3EHJNCLSIZ" class="ad4 odd " title="The Ultimate WordPress Theme" id="bsa_6139184" target="_blank" rel="nofollow">
+<img src="./Making SVGs Responsive with CSS_files/6139184-1473292377.png" width="125" height="125" alt=""></a><a href="https://srv.buysellads.com/ads/click/x/GTND42QMCEYDTKJJCT7LYKQMCWBDTKJYCAYI4Z3JCWBIVK3MFTBDVK3KC6BIP23ECTBDEK3EHJNCLSIZ" class="ad5  even" title="NewsKit - WordPress Theme for News and Magazine Sites" id="bsa_6278889" target="_blank" rel="nofollow">
+<img src="./Making SVGs Responsive with CSS_files/143780fc50245804ecca763982f61db2-1527151925.jpeg" width="125" height="125" alt=""></a>
+<script type="text/javascript" id="auto_6" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(); </script></div>
+		<div class="clr"></div>
+	</div>
+		
+	<div class="ct-widget-wrapper"> 
+
+				<div class="ct-widget ct-widget-deals">
+		    <h5>Check out our deals &amp; offers!</h5>
+		    <article>
+		        <div class="ct-latest-thumb">
+		            <a href="https://tympanus.net/codrops/deals/">
+		                <img src="./Making SVGs Responsive with CSS_files/gifticon.png" alt="Deals Thumbnail">
+		            </a>
+		        </div>
+		        <p><strong>Find great discounts for many useful services and resources on our <a href="https://tympanus.net/codrops/deals/">Deals &amp; Offers</a> page!</strong></p>
+		        <div class="clr"></div>
+		    </article>
+		</div>
+		
+
+									<div class="ct-widget ct-widget-coll">
+					<h5>Latest News:</h5>
+									<article id="post-39220" class="post-39220 collective type-collective status-publish has-post-thumbnail hentry">
+					<h3><a href="https://tympanus.net/codrops/collective/collective-503/" class="">Collective #503</a></h3>
+					<p class="ct-subline">
+						<time pubdate="pubdate">March 28, 2019</time>
+					</p>
+					<div class="ct-latest-thumb">
+						<a href="https://tympanus.net/codrops/collective/collective-503/" class="ct-trans">
+							<img width="200" height="260" src="./Making SVGs Responsive with CSS_files/Collective503.png" class="attachment-collective-thumb size-collective-thumb wp-post-image" alt="Collective503">						</a>
+					</div>
+					
+					<p class="ct-feat-excerpt">
+					   Mosaic * ethical.net * NEORT * The Boolean Game * Friendly Faces * Generative.fm * Multiscale Turing Patterns...
+					</p>
+					<div class="clr"></div>
+				</article>
+							<article id="post-39179" class="post-39179 collective type-collective status-publish has-post-thumbnail hentry">
+					<h3><a href="https://tympanus.net/codrops/collective/collective-502/" class="">Collective #502</a></h3>
+					<p class="ct-subline">
+						<time pubdate="pubdate">March 25, 2019</time>
+					</p>
+					<div class="ct-latest-thumb">
+						<a href="https://tympanus.net/codrops/collective/collective-502/" class="ct-trans">
+							<img width="200" height="260" src="./Making SVGs Responsive with CSS_files/Collective502.png" class="attachment-collective-thumb size-collective-thumb wp-post-image" alt="Collective502">						</a>
+					</div>
+					
+					<p class="ct-feat-excerpt">
+					   Griffith * Vibe * Pyright * Hyphenation in CSS * Advanced Map Shading * Lights on or off? * Writing Resilient ...
+					</p>
+					<div class="clr"></div>
+				</article>
+							</div>
+									<div class="clr"></div>
+			
+		
+		<div class="ct-widget ct-widget-default">
+			<h5>Hot on Codrops:</h5>
+							<article id="post-37034" class="post-37034 post type-post status-publish format-standard has-post-thumbnail hentry category-playground tag-3d tag-animation tag-effect tag-inspiration tag-three-js tag-webgl">
+					
+					<div class="ct-latest-thumb">
+						<a href="https://tympanus.net/codrops/2019/01/08/animated-mesh-lines/" class="ct-trans">
+							<img width="105" height="105" src="./Making SVGs Responsive with CSS_files/MeshLines_Featured-2-105x105.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="MeshLines_Featured">						</a>
+					</div>
+					<h3><a href="https://tympanus.net/codrops/2019/01/08/animated-mesh-lines/" class="">Animated Mesh Lines</a></h3>
+				   
+					<div class="clr"></div>
+				</article>
+							<article id="post-37043" class="post-37043 post type-post status-publish format-standard has-post-thumbnail hentry category-articles tag-collection tag-creative tag-demo tag-experiment tag-game tag-inspiration">
+					
+					<div class="ct-latest-thumb">
+						<a href="https://tympanus.net/codrops/2018/12/27/awesome-demos-from-2018/" class="ct-trans">
+							<img width="105" height="105" src="./Making SVGs Responsive with CSS_files/Demos2018_featured-105x105.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Demos2018_featured">						</a>
+					</div>
+					<h3><a href="https://tympanus.net/codrops/2018/12/27/awesome-demos-from-2018/" class="">Awesome Demos from 2018</a></h3>
+				   
+					<div class="clr"></div>
+				</article>
+							<article id="post-36894" class="post-36894 post type-post status-publish format-standard has-post-thumbnail hentry category-articles tag-collection tag-creative tag-inspiration tag-web-design tag-website">
+					
+					<div class="ct-latest-thumb">
+						<a href="https://tympanus.net/codrops/2018/12/18/inspirational-websites-from-2018/" class="ct-trans">
+							<img width="105" height="105" src="./Making SVGs Responsive with CSS_files/2018Websites_featured-105x105.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="2018Websites_featured">						</a>
+					</div>
+					<h3><a href="https://tympanus.net/codrops/2018/12/18/inspirational-websites-from-2018/" class="">Inspirational Websites from 2018</a></h3>
+				   
+					<div class="clr"></div>
+				</article>
+							<article id="post-36527" class="post-36527 post type-post status-publish format-standard has-post-thumbnail hentry category-tutorials tag-basic-shape tag-circle tag-css-shapes tag-polygon tag-shape-outside">
+					
+					<div class="ct-latest-thumb">
+						<a href="https://tympanus.net/codrops/2018/11/29/an-introduction-to-css-shapes/" class="ct-trans">
+							<img width="105" height="105" src="./Making SVGs Responsive with CSS_files/cssshapes_featured-1-105x105.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="cssshapes_featured">						</a>
+					</div>
+					<h3><a href="https://tympanus.net/codrops/2018/11/29/an-introduction-to-css-shapes/" class="">An Introduction to CSS Shapes</a></h3>
+				   
+					<div class="clr"></div>
+				</article>
+								</div>
+		
+	</div>
+
+	<div class="ct-pat">
+		<div class="ct-pat-info">
+			<h4>Advertisement</h4>
+			<a href="https://tympanus.net/codrops/advertise/" class="ct-advertise-here">
+				<i class="ct-icon-info"></i>
+				<span>Advertise Here</span>
+			</a>
+		</div>
+		<div id="bsap_1298539" class="bsap bsap_1298539" data-serve="CKYD5KE"><a href="https://srv.buysellads.com/ads/click/x/GTND42QMCEYDTK7UCAS4YKQMCWBDT2QUCKYI6Z3JCWBIVKQNCWADPK7KC6BIP23ECTBDEK3EHJNCLSIZ" class="ad0 odd " title="Uncode - Creative Multiuse WordPress Theme" id="bsa_7966475" target="_blank" rel="nofollow">
+<img src="./Making SVGs Responsive with CSS_files/875c36d32542ba440a60f0af9db4b1e5-1520579036.png" width="300" height="250" alt=""></a>
+<script type="text/javascript" id="auto_7" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(); </script></div>
+	</div>
+
+    		
+    	<div class="clr"></div>
+</aside>
+
+				<div class="clr"></div>
+				<!--script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script-->
+			    </div>
+</div>
+		<footer class="ct-footer">
+			
+			<div class="ct-inner ct-cf">
+				<nav class="ct-cf">
+					<ul>
+						<li><a href="https://tympanus.net/codrops/category/tutorials/">Tutorials</a></li>
+						<li><a href="https://tympanus.net/codrops/category/articles/">Articles</a></li>
+						<li><a href="https://tympanus.net/codrops/category/playground/">Playground</a></li>
+						<li><a href="https://tympanus.net/codrops/category/blueprints/">Blueprints</a></li>
+					</ul>
+					<ul>
+						<li><a href="https://tympanus.net/codrops/css_reference/">CSS Reference</a></li>
+						<li><a href="https://tympanus.net/codrops/category/news/">News</a></li>
+						<li><a href="https://tympanus.net/codrops/category/freebies/">Freebies</a></li>
+						<li><a href="https://tympanus.net/codrops/collective/">Collective</a></li>
+					</ul>
+					<ul>
+						<li><a href="https://tympanus.net/codrops/about/">About</a></li>
+						<li><a href="https://tympanus.net/codrops/contact/">Contact</a></li>
+						<li><a href="https://tympanus.net/codrops/archives/">Archives</a></li>
+						<li><a href="https://tympanus.net/codrops/deals/">Deals</a></li>
+					</ul>
+					<ul>
+						<li><a href="https://tympanus.net/codrops/advertise/">Advertise</a></li>
+						<li><a href="https://tympanus.net/codrops/privacy-policy/">Privacy Policy</a></li>
+						<li><a href="https://tympanus.net/codrops/licensing/">License</a></li>
+						<li><a href="https://tympanus.net/codrops/credits/">Credits</a></li>
+					</ul>
+				</nav>
+				<div class="ct-items ct-cf">
+					<div class="ct-item ct-copyright">
+						<span>© Codrops 2019 by</span> 
+						<a href="http://tympanus.net/" title="Tympanus">Tympanus</a>
+					</div>
+					<div class="ct-item ct-cdn">
+						<span>Content delivered by</span>
+						<a href="https://www.maxcdn.com/" title="Content Distribution Network" target="blank">Content Distribution Network</a>
+					</div>	
+				</div>
+			</div>
+		</footer>
+		<div id="cookie-law-info-bar" style="background-color: rgb(35, 41, 46); color: rgb(255, 255, 255); font-family: inherit; bottom: 0px; position: fixed; display: block;"><span>Codrops uses cookies for its advertisement solutions and for analytics. We hope you're ok with this, but you can opt-out if you wish. Read our <a href="https://www.iubenda.com/privacy-policy/92067710">Privacy Policy</a> and <a href="https://www.iubenda.com/privacy-policy/92067710/cookie-policy">Cookie Policy</a>. <a data-cli_action="accept" id="cookie_action_close_header" class="small cli-plugin-button cli-plugin-main-button cookie_action_close_header cli_action_button" style="display: inline-block; color: rgb(255, 255, 255); background-color: rgb(0, 153, 204);">OK</a></span></div><div id="cookie-law-info-again" style="display: none; background-color: rgb(35, 41, 46); color: rgb(255, 255, 255); position: fixed; font-family: inherit; width: auto; bottom: 0px; right: 100px;"><span id="cookie_hdr_showagain">Privacy &amp; Cookies Policy</span></div><div class="cli-modal-backdrop cli-fade cli-settings-overlay"></div>
+<div class="cli-modal-backdrop cli-fade cli-popupbar-overlay"></div>
+<script type="text/javascript">
+  /* <![CDATA[ */
+  cli_cookiebar_settings='{"animate_speed_hide":"500","animate_speed_show":"500","background":"#23292e","border":"#444","border_on":false,"button_1_button_colour":"#0099cc","button_1_button_hover":"#007aa3","button_1_link_colour":"#fff","button_1_as_button":true,"button_1_new_win":false,"button_2_button_colour":"#333","button_2_button_hover":"#292929","button_2_link_colour":"#0099cc","button_2_as_button":false,"button_2_hidebar":false,"button_3_button_colour":"#000","button_3_button_hover":"#000000","button_3_link_colour":"#fff","button_3_as_button":true,"button_3_new_win":false,"button_4_button_colour":"#000","button_4_button_hover":"#000000","button_4_link_colour":"#fff","button_4_as_button":true,"font_family":"inherit","header_fix":false,"notify_animate_hide":false,"notify_animate_show":false,"notify_div_id":"#cookie-law-info-bar","notify_position_horizontal":"right","notify_position_vertical":"bottom","scroll_close":false,"scroll_close_reload":false,"accept_close_reload":false,"reject_close_reload":false,"showagain_tab":false,"showagain_background":"#fff","showagain_border":"#000","showagain_div_id":"#cookie-law-info-again","showagain_x_position":"100px","text":"#ffffff","show_once_yn":false,"show_once":"10000","logging_on":false,"as_popup":false,"popup_overlay":true,"bar_heading_text":"","cookie_bar_as":"banner","popup_showagain_position":"bottom-right","widget_position":"left"}';
+  /* ]]> */
+</script><script type="text/javascript" src="./Making SVGs Responsive with CSS_files/comment-reply.min.js"></script>
+<script type="text/javascript" src="./Making SVGs Responsive with CSS_files/typeahead.min.js"></script>
+<script type="text/javascript" src="./Making SVGs Responsive with CSS_files/hogan.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wp_typeahead = {"ajaxurl":"https:\/\/tympanus.net\/codrops\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Making SVGs Responsive with CSS_files/wp-typeahead.js"></script>
+<script type="text/javascript" src="./Making SVGs Responsive with CSS_files/wp-embed.min.js"></script>
+		</div><!--ct-container-->
+	
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Page Caching using disk: enhanced (SSL caching disabled) 
+Content Delivery Network via codropspz-tympanus.netdna-ssl.com
+
+Served from: tympanus.net @ 2019-03-31 06:43:17 by W3 Total Cache
+--></body></html>

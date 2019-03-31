@@ -11,9 +11,6 @@ html {
 body {
   box-sizing: border-box;
   padding: 2rem; }
-  @media only screen and (max-width: 56.25em) {
-    body {
-      padding: 1rem; } }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -48,7 +45,7 @@ body {
     @media only screen and (max-width: 56.25em) {
       .heading-primary--sub {
         padding: 2rem;
-        font-size: 1.8rem; } }
+        font-size: 1rem; } }
 
 .heading-secondary {
   font-size: 4rem;
@@ -115,9 +112,6 @@ body {
     margin-bottom: 2rem; }
   .project-one__screenshots {
     padding: 10rem; }
-    @media only screen and (max-width: 56.25em) {
-      .project-one__screenshots {
-        padding: 1rem; } }
   .project-one__topics {
     list-style: none;
     font-size: 1.6rem;
@@ -127,9 +121,9 @@ body {
     line-height: 2.7rem;
     margin-bottom: 3rem; }
   .project-one--1 {
-    max-width: 100%; }
+    height: 30rem; }
   .project-one--2 {
-    max-width: 100%; }
+    height: 30rem; }
   .project-one__icons {
     display: flex;
     align-items: center;
@@ -172,9 +166,6 @@ body {
     margin-bottom: 2rem; }
   .project-two__screenshots {
     padding: 10rem; }
-    @media only screen and (max-width: 56.25em) {
-      .project-two__screenshots {
-        padding: 1rem; } }
   .project-two__topics {
     list-style: none;
     font-size: 1.6rem;
@@ -184,9 +175,9 @@ body {
     line-height: 2.7rem;
     margin-bottom: 3rem; }
   .project-two--1 {
-    max-width: 100%; }
+    height: 30rem; }
   .project-two--2 {
-    max-width: 100%; }
+    height: 30rem; }
   .project-two__icons {
     display: flex;
     align-items: center;
@@ -229,17 +220,18 @@ body {
     top: 40%;
     left: 10%; }
   .header__oval-blue-content {
-    width: 50rem;
-    max-width: 100%; }
-  .header__oval-blue-light-content {
+    width: 50%; }
+  .header__oval-blue-light {
     position: absolute;
-    width: 90rem;
-    max-width: 95%;
-    bottom: 0; }
-  .header__oval-pink-content {
+    height: 20rem;
+    width: 20rem;
+    bottom: 2rem;
+    left: 0; }
+  .header__oval-pink {
     position: absolute;
-    width: 200rem;
-    max-width: 95%; }
+    height: 20rem;
+    width: 20rem;
+    right: 5rem; }
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;

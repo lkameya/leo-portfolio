@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:8090/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="./Leo Kameya _ Frontend developer_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Leo Kameya _ Frontend developer_files/icon-font.css">
+    <link rel="stylesheet" href="./Leo Kameya _ Frontend developer_files/style.css">
+    <link rel="shortcut icon" type="image/png" href="http://127.0.0.1:8090/img/favicon.png">
+
+    <title>Leo Kameya | Frontend developer</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo-box">
+            <img class="header__logo" src="./Leo Kameya _ Frontend developer_files/logo-white.png" alt="logo-box">
+        </div>
+        <div class="header__oval-blue-content">
+            <img class="header__oval-blue" src="./Leo Kameya _ Frontend developer_files/oval-blue.svg" alt="blue circle">
+        </div>
+        <div class="header__oval-blue-light-content">
+            <img class="header__oval-blue-light" src="./Leo Kameya _ Frontend developer_files/oval-blue-light.svg" alt="blue circle">
+        </div>
+        <div class="header__oval-pink-content">
+            <img class="header__oval-pink" src="./Leo Kameya _ Frontend developer_files/oval-pink.svg" alt="blue circle">
+        </div>
+
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">
+                    Frontend developer
+                </span>
+                <span class="heading-primary--sub">
+                    Hi, I'm Leo Kameya! I work to bring simplicity and high performance to web and mobile applications.
+                </span>
+            </h1>
+        </div>
+    </header>
+    <main>
+        <section class="section-work">
+            <h2 class="heading-secondary">
+                Work
+            </h2>
+
+            <div class="project-one">
+                <div class="project-one__info">
+                    <h3 class="project-one__name">Portfolio</h3>
+                    <span class="project-one__title">
+                        Personal portfolio
+                    </span>
+                    <p class="project-one__description">
+                        Personal portfolio built with HTML5 and CSS3. The concept was designed in Sketch
+                        and the focus is to have a clean and simple design.
+                    </p>
+                    <ul class="project-one__topics">
+                        <li class="project-one__topic-1">⇒ Preprocessor: SASS using the 7-1 pattern structure</li>
+                        <li class="project-one__topic-2">⇒ Methodology: BEM - Block, Element, Modifier </li>
+                    </ul>
+                    <div class="project-one__icons">
+                        <img class="sketch-logo" src="./Leo Kameya _ Frontend developer_files/sketch-logo.png" alt="sketch logo">
+                        <img class="sass-logo" src="./Leo Kameya _ Frontend developer_files/sass-logo.png" alt="sketch logo">
+                    </div>
+                </div>
+                <div class="project-one__screenshots">
+                    <img class="project-one--2" src="./Leo Kameya _ Frontend developer_files/project-one-2.png" alt="screenshot 2">
+
+                    <div class="github-logo">
+                        <a href="https://www.github.com/lkameya/leo-portfolio" class="btn-text">View in Github →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-two">
+                <div class="project-two__info">
+                    <h3 class="project-two__name">Spotify API</h3>
+                    <span class="project-two__title">
+                        A custom spotify player
+                    </span>
+                    <p class="project-two__description">
+                        Keep listening to your favorite music in this original player designed for Spotify users.
+                        This application uses the Spotify API for developers.
+                    </p>
+                    <ul class="project-two__topics">
+                        <li class="project-two__topic-1">⇒ JS Framework: React </li>
+                        <li class="project-two__topic-2">⇒ Server: NodeJS with Express </li>
+                    </ul>
+                    <ul class="project-two__topics">
+                            <li class="project-two__topic-2"><a href="https://quiet-castle-21882.herokuapp.com/">Visit Website</a></li>
+                        </ul>
+                    <div class="project-two__icons">
+                        <img class="react-logo" src="./Leo Kameya _ Frontend developer_files/react-logo.png" alt="sketch logo">
+                        <img class="nodejs-logo" src="./Leo Kameya _ Frontend developer_files/nodejs-logo.png" alt="sketch logo">
+                    </div>
+                </div>
+                <div class="project-two__screenshots">
+                    <img class="project-two--1" src="./Leo Kameya _ Frontend developer_files/spotlight.png" alt="screenshot 1">
+
+                    <div class="github-logo">
+                            <a href="https://github.com/lkameya/spotlight" class="btn-text">View in Github →</a>
+                        </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function() {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					head.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					head.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function(msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			console.log('Live reload enabled.');
+		})();
+	}
+	// ]]>
+</script>
+
+
+</body></html>

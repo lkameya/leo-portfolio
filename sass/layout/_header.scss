@@ -25,15 +25,22 @@
     left: 10%;
   }
 
-  &__oval-blue-light {
+  &__oval-blue-content {
+    width: 50rem;
+    max-width: 100%;
+  }
+
+  &__oval-blue-light-content {
     position: absolute;
-    bottom: 2rem;
-    left: 0;
+    width: 90rem;
+    max-width: 95%;
+    bottom: 0;
   }
   
-  &__oval-pink {
+  &__oval-pink-content {
     position: absolute;
-    right: 5rem;
+    width: 200rem;
+    max-width: 95%;
   }
   
 }

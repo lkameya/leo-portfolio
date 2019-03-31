@@ -22,9 +22,6 @@
     }
   }
 
-
-
-
   &__name {
     text-transform: uppercase;
     font-weight: 400;
@@ -54,6 +51,10 @@
 
   &__screenshots {
     padding: 10rem;
+
+    @include respond(tab-port) {
+      padding: 1rem;
+    }
   }
 
   &__topics {
@@ -75,11 +76,11 @@
   }
 
   &--1 {
-    height: 30rem;
+    max-width: 100%;
   }
 
   &--2 {
-    height: 30rem;
+    max-width: 100%;
   }
 
   &__icons {
@@ -140,7 +141,13 @@
 
   &__screenshots {
     padding: 10rem;
+
+    @include respond(tab-port) {
+      padding: 1rem;
+    }
   }
+
+
 
   &__topics {
     list-style: none;
@@ -161,11 +168,11 @@
   }
 
   &--1 {
-    height: 30rem;
+    max-width: 100%;
   }
 
   &--2 {
-    height: 30rem;
+    max-width: 100%;
   }
 
   &__icons {
