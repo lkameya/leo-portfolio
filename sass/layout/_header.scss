@@ -1,5 +1,6 @@
 .header {
   height: 95vh;
+  position: relative;
   background-image: linear-gradient(
                     to bottom right,rgba(107, 62, 255, 0.7), 
                     rgba(171, 72, 232, 0.8)), 
@@ -28,6 +29,9 @@
   &__oval-blue-content {
     width: 50rem;
     max-width: 100%;
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
 
   &__oval-blue-light-content {
@@ -35,12 +39,18 @@
     width: 90rem;
     max-width: 95%;
     bottom: 0;
+    @include respond(tab-port) {
+      display: none;
+    }
   }
   
   &__oval-pink-content {
     position: absolute;
-    width: 150rem;
+    width: 200rem;
     max-width: 95%;
     top: 0;
+    @include respond(tab-land) {
+      display: none;
+    }
   }
 }
