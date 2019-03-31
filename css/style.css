@@ -238,8 +238,9 @@ body {
     bottom: 0; }
   .header__oval-pink-content {
     position: absolute;
-    width: 200rem;
-    max-width: 95%; }
+    width: 150rem;
+    max-width: 95%;
+    top: 0; }
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
