@@ -1,3 +1,268 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
 body {
-  background-color: orangered;
-  width: 100%; }
+  box-sizing: border-box;
+  padding: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 1rem; } }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #777; }
+
+.heading-primary {
+  color: #fff; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
+    @media only screen and (max-width: 56.25em) {
+      .heading-primary--main {
+        padding: 2rem;
+        font-size: 4rem; } }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: .02rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-delay: .5s; }
+    @media only screen and (max-width: 56.25em) {
+      .heading-primary--sub {
+        padding: 2rem;
+        font-size: 1.8rem; } }
+
+.heading-secondary {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #4A5B6D;
+  text-align: center;
+  margin-bottom: 10rem; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+.section-work {
+  background-color: #f7f7f7;
+  padding: 30rem 0;
+  margin-top: -25vh; }
+
+.project-one {
+  display: flex;
+  justify-content: space-evenly; }
+  @media only screen and (max-width: 56.25em) {
+    .project-one {
+      flex-direction: column; } }
+  .project-one__info {
+    padding: 10rem;
+    width: 50%; }
+    @media only screen and (max-width: 56.25em) {
+      .project-one__info {
+        padding: 2rem;
+        width: 100%; } }
+  .project-one__name {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #AB48E8;
+    margin-bottom: 2rem; }
+  .project-one__title {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2rem;
+    color: #4A5B6D;
+    margin-bottom: 2rem; }
+  .project-one__description {
+    display: inline-block;
+    font-weight: 200;
+    font-size: 1.6rem;
+    letter-spacing: .05rem;
+    color: #4A5B6D;
+    line-height: 2.7rem;
+    margin-bottom: 2rem; }
+  .project-one__screenshots {
+    padding: 10rem; }
+    @media only screen and (max-width: 56.25em) {
+      .project-one__screenshots {
+        padding: 1rem; } }
+  .project-one__topics {
+    list-style: none;
+    font-size: 1.6rem;
+    font-weight: 200;
+    color: #4A5B6D;
+    letter-spacing: .05rem;
+    line-height: 2.7rem;
+    margin-bottom: 3rem; }
+  .project-one--1 {
+    max-width: 100%; }
+  .project-one--2 {
+    max-width: 100%; }
+  .project-one__icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; }
+
+.project-two {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly; }
+  @media only screen and (max-width: 56.25em) {
+    .project-two {
+      flex-direction: column; } }
+  .project-two__info {
+    padding: 10rem;
+    width: 50%; }
+    @media only screen and (max-width: 56.25em) {
+      .project-two__info {
+        padding: 2rem;
+        width: 100%; } }
+  .project-two__name {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #AB48E8;
+    margin-bottom: 2rem; }
+  .project-two__title {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2rem;
+    color: #4A5B6D;
+    margin-bottom: 2rem; }
+  .project-two__description {
+    display: inline-block;
+    font-weight: 200;
+    font-size: 1.6rem;
+    letter-spacing: .05rem;
+    color: #4A5B6D;
+    line-height: 2.7rem;
+    margin-bottom: 2rem; }
+  .project-two__screenshots {
+    padding: 10rem; }
+    @media only screen and (max-width: 56.25em) {
+      .project-two__screenshots {
+        padding: 1rem; } }
+  .project-two__topics {
+    list-style: none;
+    font-size: 1.6rem;
+    font-weight: 200;
+    color: #4A5B6D;
+    letter-spacing: .05rem;
+    line-height: 2.7rem;
+    margin-bottom: 3rem; }
+  .project-two--1 {
+    max-width: 100%; }
+  .project-two--2 {
+    max-width: 100%; }
+  .project-two__icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; }
+
+.sketch-logo {
+  height: 5rem;
+  margin-right: 2rem; }
+
+.sass-logo {
+  height: 5rem;
+  margin-right: 2rem; }
+
+.github-logo {
+  margin-top: 2rem;
+  height: 5rem;
+  display: flex;
+  justify-content: flex-end; }
+
+.nodejs-logo {
+  height: 5rem; }
+
+.react-logo {
+  height: 5rem; }
+
+.header {
+  height: 95vh;
+  position: relative;
+  background-image: linear-gradient(to bottom right, rgba(107, 62, 255, 0.7), rgba(171, 72, 232, 0.8)), url(../../img/header.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 5rem;
+    left: 5rem; }
+  .header__logo {
+    height: 3rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 10%; }
+  .header__oval-blue-content {
+    width: 50rem;
+    max-width: 100%; }
+    @media only screen and (max-width: 56.25em) {
+      .header__oval-blue-content {
+        width: 100%; } }
+  .header__oval-blue-light-content {
+    position: absolute;
+    width: 90rem;
+    max-width: 95%;
+    bottom: 0; }
+    @media only screen and (max-width: 56.25em) {
+      .header__oval-blue-light-content {
+        display: none; } }
+  .header__oval-pink-content {
+    position: absolute;
+    width: 200rem;
+    max-width: 95%;
+    top: 0; }
+    @media only screen and (max-width: 75em) {
+      .header__oval-pink-content {
+        display: none; } }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: black;
+  display: inline-block;
+  text-decoration: none;
+  padding: 3px;
+  transition: all .2s; }
+
+.btn-text:hover {
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0); }
